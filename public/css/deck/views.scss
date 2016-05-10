@@ -1,0 +1,56 @@
+/* ==========================================================================
+   View Globals
+   ========================================================================== */
+.view-header,
+.view-content,
+.view-inner,
+.view-footer {
+  @include clearfix();
+  position: relative;
+  height: auto;
+}
+
+.content {
+    .view-header {
+        @include grid();
+    }
+}
+.view-filters {
+    margin-bottom: ($gutter * 2);
+}
+.views-exposed-widget {
+}
+.views-submit-button {
+    clear: left;
+    float: left;
+}
+.views-reset-button {
+    float: left;
+}
+
+.view-content {
+    @include clearfix();
+}
+.view-footer{
+    a { 
+        @include btn(); 
+        @include btn-primary(); 
+        @include btn-large(); 
+    }
+}
+.view-empty {
+    p {
+        text-align: center;
+        @include h1();
+    }
+}
+
+.logged-in {
+    .view-inner {
+        // padding-top: 30px;
+        @include clearfix();
+        @media #{$small-only} {
+            padding-top: 0;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+// Views
+.view-header,
+.view-content,
+.view-inner,
+.view-footer {
+  @include clearfix();
+  position: relative;
+  height: auto;
+}
+
+.view-filters {
+    margin-bottom: 20px;
+}
+.views-exposed-widget {
+}
+.views-submit-button {
+    clear: left;
+    float: left;
+}
+.views-reset-button {
+    float: left;
+}
+
+.view-content {
+    @include clearfix();
+}
+.view-footer{
+}
+.view-empty {
+    p {
+        text-align: center;
+    }
+}

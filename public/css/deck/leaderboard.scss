@@ -1,0 +1,121 @@
+
+.leaderboard {
+  @include clearfix();
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+   @media #{$small-only} {
+      margin-top: 0;
+    }
+  h1 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 14px;
+    @media #{$small-only} {
+      margin-top: 0;
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+  #vs-board {
+    @include clearfix();
+    width: 50%;
+    float: left;
+    text-align: center;
+    margin-bottom: 20px;
+    @media #{$small-only} {
+    }
+    #percent-donut {
+      width: 200px;
+      height: 200px;
+      @media #{$small-only} {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+  #yes-board {
+    width: 25%;
+    float: left;
+    text-align: center;
+    h1 {
+      font-family: $body-font-family;
+      color: #666;
+      margin-bottom: 5px;
+      font-size: 32px;
+      @media #{$small-only} {
+        font-size: 26px;
+      }
+    }
+    #yes-votes {
+      font-weight: 400;
+      color: #333;
+    }
+    h2 {
+      color: $yes;
+      margin-bottom: 25px;
+    }
+    #yes-percentage {
+    }
+  }
+  #no-board {
+    width: 25%;
+    float: right;
+    text-align: center;
+    h1 {
+      font-family: $body-font-family;
+      color: #666;
+      margin-bottom: 5px;
+      margin-bottom: 5px;
+      font-size: 32px;
+      @media #{$small-only} {
+        font-size: 26px;
+      }
+    }
+    #no-votes {
+      font-weight: 400;
+      color: #333;
+    }
+    h2 {
+      color: $no;
+      margin-bottom: 25px;
+    }
+    #no-percentage {
+    }
+  }
+  .abstain-button {
+    display: block;
+    margin-top: 8px;
+    color: #666;
+    text-decoration: underline;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  .count-board{
+    display: block;
+    clear: both;
+    border-top: 1px solid #EAEAEA;
+    border-bottom: 1px solid #EAEAEA;
+    text-align: center;
+    padding: 6px 0 6px 0;
+    @media #{$small-only} {
+      clear: both;
+    }
+    h3 {
+      font-family: $body-font-family;
+      font-weight: 400;
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+      margin-right: 10px;
+    }
+  }
+  .vote-button-style {
+    @include btn();
+    @include btn-large();
+    @media #{$small-only} {
+      @include btn-small();
+      margin-bottom: 10px;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.block-va-social {
+	$iconsize: 24px;
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		display: inline-block;
+		width: $iconsize;
+		height: $iconsize; 
+		margin: 0 6px 0 0;
+		background-size: contain;	
+		list-style: none;	
+		@media #{$medium-only} {
+			margin: 0 10px 10px 0;
+		}
+		a {
+			width: $iconsize; 
+			height: $iconsize; 
+			cursor: pointer;
+			padding: 0; 	
+			margin-bottom: 0;	
+			float: left;
+			border: none;
+		}	
+	}
+	$icon-url: "../images/social/flat"; // set the icon type via url
+	.facebook 	{ background-image: url('#{$icon-url}/facebook.png'); background-repeat: no-repeat; }
+	.twitter 	{ background-image: url('#{$icon-url}/twitter.png'); background-repeat: no-repeat; }
+	.rss 		{ background-image: url('#{$icon-url}/rss.png'); background-repeat: no-repeat; }
+	.vimeo		{ background-image: url('#{$icon-url}/vimeo.png'); background-repeat: no-repeat; }
+	.linkedin 	{ background-image: url('#{$icon-url}/linkedin.svg'); background-repeat: no-repeat; }
+	.youtube 	{ background-image: url('#{$icon-url}/youtube.png'); background-repeat: no-repeat; }
+	.instagram 	{ background-image: url('#{$icon-url}/instagram.png'); background-repeat: no-repeat; }
+	.pinterest 	{ background-image: url('#{$icon-url}/pinterest.png'); background-repeat: no-repeat; }
+	.googleplus	{ background-image: url('#{$icon-url}/googleplus.png'); background-repeat: no-repeat; }
+	.github	{ background-image: url('#{$icon-url}/github.png'); background-repeat: no-repeat; }
+}
+
+.region-footer {
+	.block-va-social {
+		@include grid-column(4);
+		@include clearfix();
+	}
+}
+
+
+
+
+

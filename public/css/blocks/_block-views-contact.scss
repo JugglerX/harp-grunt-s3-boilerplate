@@ -1,0 +1,70 @@
+// Contact Details
+// ==========================================================================
+.view-contact {
+  .field {
+    padding: 4px 0 4px 0;
+    border-bottom: 1px dotted #EAEAEA;
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .views-label, .field-label 	{
+    display: inline;
+    font-weight: bold;
+  }
+  .field-content, .field-items {
+    display: inline;
+  }
+  .views-field-field-address { display: inline; }
+  .views-field-field-address p { display: inline; font-size: 13px; }
+}
+
+// Contact Details - Header
+// ==========================================================================
+.block-views-contact-block-1 {
+  @include grid-column(6);
+  float: right;
+  text-align: right;
+  vertical-align: middle;
+  .views-field{
+    display: inline-block;
+    padding: 10px;
+  }
+}
+
+
+// Contact Details - Footer
+// ==========================================================================
+.block-views-contact-footer {
+  @include grid-column(4);
+  .views-field-field-contact-phone {
+    display: block;
+    .field-label,
+    .views-label {
+      color: #FFF;
+    }
+    .field-content {
+      color: #CCC;
+    }
+  }
+  .views-field-field-contact-email {
+    display: block;
+    .field-label,
+    .views-label {
+      color: #FFF;
+    }
+    .field-content {
+      color: #CCC;
+    }
+  }
+  .views-field-field-contact-address {
+    display: block;
+    .field-label,
+    .views-label {
+      color: #FFF;
+    }
+    .field-content {
+      color: #CCC;
+    }
+  }
+}
+

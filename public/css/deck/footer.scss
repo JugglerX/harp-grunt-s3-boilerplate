@@ -1,0 +1,22 @@
+.subfooter {
+  background: #ccc;
+   p.copyright{
+      float: left;
+      width: 50%;
+      padding: 12px 0;
+      box-sizing: border-box;
+      @media #{$small-only} {
+         width: 100%;
+         margin: 0;
+      }
+   }
+    p.va{
+      text-align: right;
+      @media #{$small-only} {
+         text-align: left;
+         padding-top: 0;
+         margin-bottom: 20px;
+      }
+    }
+}
+

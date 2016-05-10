@@ -1,0 +1,139 @@
+/* ==========================================================================
+   Paragraph
+   ========================================================================== */
+p { 
+	color: $base-font-color;
+	font-family: $base-font;
+	font-size: $base-font-size;
+	line-height: $base-line-height; 
+	margin: 0 0 20px 0; 
+	@media #{$medium-only} {
+		font-size: $base-font-size - 2;
+	}
+}
+
+img {
+  @include img-responsive();
+  //vertical-align: bottom;
+}
+a img {
+  //@include img-glow();
+}
+
+
+/* ==========================================================================
+   Content Headings
+   ========================================================================== */
+h1	{ 
+	font-family: $custom-font; 
+	font-size: 42px; 
+	line-height: 1.2; 
+	font-weight: 300; 
+	color: $base-font-color;
+	padding: 0; 
+	margin: 0 0 20px 0; 
+	@media #{$medium-only} {
+		font-size: 32px;
+	}
+	@media #{$small-only} {
+		font-size: 30px;
+	}
+}
+
+h2	{ 
+	font-family: $custom-font; 
+	font-size: 26px;
+	line-height: 28px;
+	font-weight: 500; 
+	color: $base-font-color; 
+	padding: 0; 
+	margin: 0 0 10px 0; 
+	@media #{$medium-only} {
+		font-size: 28px;
+	}
+	@media #{$small-only} {
+		font-size: 22px;
+	}
+}
+h3	{ 
+	font-family: $custom-font; 
+	font-size: 18px;
+	font-weight: 700; 
+	color: $base-font-color; 
+	padding: 0; 
+	margin: 0; 
+}
+h4	{ 
+	font-family: $custom-font; 
+	font-size: 16px;
+	font-weight: 700; 
+	color: $base-font-color; 
+	padding: 0; 
+	margin: 0; 
+}
+h5	{ 
+	font-family: $custom-font; 
+	font-size: 12px;
+	font-weight: 700; 
+	color: $base-font-color; 
+	padding: 0; 
+	margin: 0; 
+}
+h6	{ 
+	font-family: $custom-font; 
+	font-size: 11px;
+	font-weight: 700; 
+	color: $base-font-color; 
+	padding: 0; 
+	margin: 0; 
+}
+
+// List
+ul	 						{ color: $base-font-color; margin: 10px 0 30px 0; list-style: disc; padding: 0 0 0 14px }
+ol 							{ color: $base-font-color; margin: 0 0 20px 0; list-style: decimal; }
+li 							{ color: $base-font-color; margin: 0 0 7px 0px; list-style-type: disc; padding: 0;}
+
+// Emphasis
+strong 					{ font-weight: bold; }
+em 						{ font-style: italic; }
+
+// Blockquote
+blockquote, .blockquote {
+	margin: 0 0 20px 0;
+	padding: 14px;
+	//float: right;
+	//width: 300px;
+	background: lighten($gray,55%);
+	color: $primary-color;
+	font-size: 18px;
+	line-height: 1.5;
+	font-weight: 200;
+	font-style: normal;
+	//border-left: 4px solid lighten($primary-color,40%);
+	p {
+		margin: 0;
+		padding: 0;
+		//color: $primary-color;
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: 200;
+		font-style: normal;
+		em {
+			font-style: normal;
+		}
+		&:first-of-type {
+			font-size: inherit;
+			line-height: inherit;
+			font-weight: inherit;
+		}
+	}
+}
+
+
+
+
+
+// HR
+hr, .hr					{ border: 0; border-bottom: 2px solid $gray; display: block;}
+
+

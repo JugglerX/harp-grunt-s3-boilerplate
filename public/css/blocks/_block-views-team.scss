@@ -1,0 +1,5 @@
+// Views Team /team
+// ==========================================================================
+.block-views-team-block {
+  @include grid-row($behavior: nest)
+}

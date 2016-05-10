@@ -1,0 +1,124 @@
+.issues {
+  @include grid-container();
+}
+.issue {
+  @include clearfix();
+  border-top: 1px solid #CCC;
+  top: -1px;
+  padding-bottom: 14px;
+  padding-top: 14px;
+  min-height: 420px;
+  // height: 410px;
+  @include grid(4);
+  .issue-body {
+   float: left;
+   width: 100%;
+    .issue-image{
+      height: 170px;
+      overflow: hidden;
+      position: relative;
+      // z-index: 1;
+      margin-bottom: 8px;
+        @media #{$medium-only} {
+          height: 130px;
+        }
+        @media #{$small-only} {
+          height: 140px;
+        }
+    }
+  }
+
+  &.view-mode-teaser {
+
+  }
+  &.view-mode-full {
+    border-bottom: none;
+  }
+
+  @media #{$small-only} {
+    min-height: 200px;
+    border-top: none;
+    border-bottom: 1px solid #CCC;
+    top: 0px;
+    height: auto;
+    margin-bottom: 1em;
+  }
+}
+
+.shadow-glass {
+  background-color:rgba(0,0,0,0.2);
+  position: absolute;
+  display: inline-block;
+  z-index: 100;
+  padding-left: 5px;
+  width: 100%;
+  height: 30px;
+  bottom: 0;
+  left: 0;
+}
+
+.issue-time {
+  display: inline;
+  position: absolute;
+  font-size: 1.1em;
+  color: white;
+  text-shadow: 1px 1px rgba(0,0,0,0.5);
+  top: 1px;
+  left: 10px;
+}
+
+.issue-info {
+  color: white;
+  width: 100%;
+  z-index: 1000;
+  line-height: 1.6em;
+  font-size: 1.2em;
+}
+
+.part-info{
+  // width: 35%;
+  span {
+    font-weight: 700;
+  }
+  float:left;
+    @media #{$small-only} {
+      // width: 45%;
+    }
+}
+
+.vote-info{
+  span {
+    font-weight: 700;
+  }
+  // width: 32%;
+  display: inline;
+  float:left;
+  margin-left: 3px;
+    @media #{$small-only} {
+      // width: 45%;
+    }
+}
+
+.little-donut {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 200;
+    @media #{$small-only} {
+
+    }
+}
+
+.little-class {
+  // position: absolute;
+  // float: right;
+  // margin-left: auto;
+  width: 50px;
+  height: 50px;
+}
+
+.no-borders {
+  border-top: none;
+  border-bottom: none;
+}
+

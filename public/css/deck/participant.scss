@@ -1,0 +1,151 @@
+.participants {
+	@include grid-container();
+  @include clearfix();
+}
+.participant {
+  @include grid(1);
+  margin-bottom: 10px;
+  text-align: center;
+  min-height: 130px;
+  @media #{$large-up} {
+    min-height: 130px;
+  }
+  @media #{$large-up}-xl {
+    min-height: 200px;
+  }
+  @media #{$small-only} {
+    width: 23%;
+    float: left;
+    margin-right: 2%;
+    min-height: 136px;
+  }
+  &.yes {
+  }
+  &.no {
+  }
+  &.delegated {
+    @include opacity(30);
+  }
+  .participant-image {
+    box-sizing: border-box;
+    border-radius: 100%;
+    background: #DDD;
+    @include img-glow();
+    cursor: pointer;
+    &.current {
+      border: 2px solid #333 !important;
+      // @include box-shadow();
+    }
+    &.rep {
+      border: 2px solid $primary-color !important;
+    }
+  }
+  .participant-avatar {
+    position: relative;
+  }
+  .participant-username {
+    margin: 0px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    font-weight: 400;
+    em {
+      display: block;
+      font-size: 11px;
+      margin-bottom: 2px;
+      font-family: $body-font-family;
+      font-weight: 400;
+      font-style: normal;
+      display: none;
+    }
+  }
+  .participant-vote-count {
+  }
+  .participant-badge {
+  }
+  .constituents {
+    @include clearfix();
+    .participant {
+      @include reset();
+      min-height: 0;
+      width: 22%;
+      margin-top: 4%;
+      float: left;
+      margin-right: 3%;
+      margin-bottom: 0;
+      @media #{$small-only} {
+        width: 23%;
+        float: left;
+        margin-right: 2%
+      }
+      .participant-username {
+        display: none;
+      }
+      .participant-vote-count {
+        display: none;
+      }
+    }
+  }
+}
+
+.zone {
+  &.zone-yes {
+    @include grid(6);
+    @include clearfix();
+    min-height: 20px;
+  }
+  &.zone-no {
+    @include grid(6);
+    @include clearfix();
+    min-height: 20px;
+    .participant {
+      float: right;
+    }
+  }
+  .zone-inner {
+    margin-left: 20px;
+  }
+  .participant {
+    margin-left: -20px;
+    margin-top: -20px;
+    .participant-image {
+      // @include box-shadow(0 0px 7px #CCC);
+      border: 2px solid #FFF;
+    }
+  }
+}
+
+.zone-abstain {
+   clear: both;
+   border-top: 1px dashed #CCC;
+   padding-top: 20px;
+  @media #{$small-only} {
+    clear: both;
+  }
+}
+
+.badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    min-width: 10px;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #FFF;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #CCC;
+    border-radius: 11px;
+    &.yes {
+      background-color: $yes;
+    }
+    &.no {
+      background-color: $no;
+    }
+    &.abstain {
+      background-color:#666;
+    }
+  }

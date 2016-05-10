@@ -1,0 +1,147 @@
+// Button
+// --------------------------------------------------
+.btn {
+  background: #333;
+  display: inline-block;
+  padding: 4px 10px 4px;
+  margin-bottom: 0;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 300;
+  @include border-radius(3px);
+  @include box-shadow();
+  @include transition(background,.15s,linear);
+  &:hover {
+    color: #FFF;
+    text-decoration: none;
+    background-color: darken(#333, 10%);
+    @include transition(background .15s linear);
+  }
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+// Small
+.btn-small {
+  padding: 5px 10px;
+  font-size: 11px;
+}
+
+// Normal
+.btn-normal {
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 700;
+}
+// meduium
+.btn-medium {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 700;
+}
+// Large
+.btn-large {
+  padding: 12px 22px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+// Full-Width
+.btn-full {
+  padding: 13px 24px;
+  font-size: 14px;
+  display: block;
+}
+.btn-minimal {
+  padding: 13px 24px;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: none;
+  color: $secondarycolor;
+  font-weight: 700;
+}
+.btn-clear {
+  background: none;
+  border: none;
+  -webkit-appearance: none;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  text-indent: 0;
+  font-size: 12px;
+  color: $primary-color;
+  vertical-align: baseline;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Button Colours
+// --------------------------------------------------
+.btn-primary {
+  background-color: $primary-color;
+  color: #FFF;
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    color: #FFF;
+  }
+}
+
+.btn-secondary {
+  background-color: $secondarycolor;
+  color: $primary-color;
+  &:hover {
+    background-color: darken($secondarycolor, 10%);
+    color: $primary-color;
+  }
+}
+
+.btn-red {
+  background-color: $red;
+  color: #FFF;
+  &:hover {
+    background-color: lighten($red, 10%);
+    color: #FFF;
+  }
+}
+
+.btn-green {
+  background-color: $green;
+  color: #FFF;
+  &:hover {
+    background-color: lighten($green, 10%);
+    color: #FFF;
+  }
+}
+
+.btn-black {
+  background-color: #000;
+  color: #FFF;
+  &:hover {
+    background-color: lighten(#000, 10%);
+    color: #FFF;
+  }
+}
+
+// Form Buttons
+// --------------------------------------------------
+input.form-submit {
+      @extend .btn;
+      margin-right: 10px;
+      text-indent: 0;
+}
+input.form-submit.disabled {
+  cursor: default;
+  color: #666;
+  background-color: #EAEAEA;
+}
+
+
+

@@ -1,0 +1,32 @@
+.block-blockify-blockify-logo {
+
+  #logo {
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    img {
+      display: none;
+    }
+    @media #{$medium-up} {
+      background-image: url("../images/logo.png");
+      width: 100px;
+      height: 40px;
+    }
+    @media #{$small-only} {
+      background-image: url("../images/logo-mobile.png");
+      height: 30px;
+      width: 50px;
+    }
+  }
+}
+
+.region-header {
+  .block-blockify-blockify-logo {
+    @media #{$medium-up} {
+      @include grid-column(3);
+    }
+    @media #{$small-only} {
+      @include grid-column(12);
+    }
+  }
+}

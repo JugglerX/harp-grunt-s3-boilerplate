@@ -1,0 +1,15 @@
+.block-ds-extras-headline,
+.block-ds-extras-contact-headline {
+	background-color: $primary-color;
+	.block-inner {
+		@include container();
+		padding: 100px 0 30px 0;
+	}
+	.field-name-title {
+		h1, h2 {
+			color: #FFF;
+		}
+	}
+}
+
+

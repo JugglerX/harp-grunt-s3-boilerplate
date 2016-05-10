@@ -1,0 +1,91 @@
+ul.menu {
+	display: inline-block;
+	font-weight: 700;
+	font-family: $body-font-family;
+	font-size: 14px;
+	line-height: $baselineheight;
+	vertical-align: middle;
+	border-bottom: none;
+	z-index: 140;
+	padding: 0;
+	margin: 0;
+	// Hide Desktop menu in mobile view
+	@media #{$small-only} {
+		display: none;
+	}
+	li {
+		float: left;
+		display: block;
+		text-transform: uppercase;
+		line-height: 24px;
+		margin: 0;
+		padding: 0;
+		margin-right: 10px;
+
+		&:first-child a{
+			padding-left: 0;
+		}
+		a {
+			display: block;
+			background: none;
+			color: $primary-color;
+			text-decoration: none;
+			border: none;
+			&:hover {
+				color: $primary-color;
+				text-decoration: underline;
+			}
+			&.active {
+				color: $primary-color;
+				text-decoration: underline;
+			}
+			@media #{$medium-only} {
+		   		padding: 2px 6px;
+		   		font-size: 13px;
+		  	}
+		}
+		// Special Menu Items
+		span {
+			padding: 10px 18px;
+			display: block;
+			background: none;
+			color: $primary-color;
+			cursor: context-menu;
+			@media #{$medium-only} {
+		   		padding: 2px 6px;
+		   		font-size: 13px;
+		  	}
+		}
+		&.expanded {
+			// Second Level
+			ul {
+				padding: 14px 7px;
+				margin: 0;
+
+				li {
+					text-transform: capitalize;
+					a {
+						margin: 0 0 7px 0;
+						padding: 5px 10px;
+						font-size: 14px;
+						font-weight: 400;
+						color: #ccc;
+						&:hover {
+							color: #fff;
+						}
+					}
+				}
+				// Third Level
+				ul {
+					li {
+						a {
+							text-indent: 20px;
+							&:hover {
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

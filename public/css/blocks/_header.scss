@@ -1,0 +1,19 @@
+.top {
+	z-index: 500;
+	position: fixed;
+	top: 0;
+	@media #{$small-only} {
+		position: relative;
+	}
+}
+
+.header {
+	z-index: 400;
+	position: fixed;
+	top: 36px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+	@media #{$small-only} {
+		position: relative;
+		top: 0;
+	}
+}

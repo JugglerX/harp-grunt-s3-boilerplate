@@ -1,43 +1,33 @@
-// @import "functions";
-// @import "settings";
-// @import "reset";
-// @import "breakpoints";
-// @import "mixins";
-// @import "grid";
+@import "functions";
+@import "settings";
+@import "reset";
+@import "breakpoints";
+@import "mixins";
+@import "grid";
 
-// // Deck
-// @import "deck/admin";
-// @import "deck/type";
+// Deck
+@import "deck/admin";
+@import "deck/type";
 
-// // Layout
-// @import "layout/layout";
-// @import "layout/views";  
- 
+// Layout
+@import "layout/layout";
+@import "layout/views";
 
-// // Blocks 
-// @import "blocks/block-blockify-logo";
-// @import "blocks/block-va-social";
-// @import "blocks/block-views-contact";
-// @import "blocks/block-menu-block";
-// @import "blocks/block-views-homepage-slider";
-// @import "blocks/block-views-hero-slideshow";
-// @import "blocks/block-views-team";
-// @import "blocks/block-views-services-block-1";
 
-// // Node
-// @import "node/node-team-view-mode-card";
-
-// // Font
-// @import url(http://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,700|Roboto:400,700);
+// Blocks
+@import "blocks/hero";
+@import "blocks/menu";
+@import "blocks/header";
+// Font
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,700|Roboto:400,700);
 
 
 // Body
 body {
-   background: #000; 
 }
 
 body {
-   // @include display-breakpoint;
+   @include display-breakpoint;
 }
 
 * {

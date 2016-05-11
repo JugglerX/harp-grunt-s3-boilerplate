@@ -6,7 +6,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600" rel="stylesheet" type="text/css" />
-		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.js"></script>
 		<noscript>
 
 		</noscript>
@@ -16,13 +16,12 @@
 	<% var className = (current.source == 'index') ? "homepage" : current.source; %>
 	<body class="<%- className %>">
 
-		<!-- Header Wrapper -->
-		<%- partial("_shared/header") %>
+		<h1>Layout File for Images</h1>
 
 		<%- yield %>
 
-		<!-- Footer Wrapper -->
 		<%- partial("_shared/footer") %>
-<pre><%= JSON.stringify(public, null, '\t') %></pre>
+
+
 	</body>
 </html>

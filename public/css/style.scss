@@ -5,14 +5,9 @@
 @import "mixins";
 @import "grid";
 
-// Deck
-@import "deck/admin";
-@import "deck/type";
-
 // Layout
 @import "layout/layout";
 @import "layout/views";
-
 
 // Blocks
 @import "blocks/hero";

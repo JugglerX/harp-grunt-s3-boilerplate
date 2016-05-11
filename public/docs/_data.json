@@ -1,0 +1,11 @@
+{
+  "grid": {
+    "title": "Hello World.",
+    "date": "2013-02-28"
+  },
+  "images": {
+  	"layout": "_layout-images",
+    "title": "Images",
+    "date": "2013-03-04"
+  }
+}

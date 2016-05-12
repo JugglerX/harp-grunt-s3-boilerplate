@@ -1,0 +1,222 @@
+// ==========================================================================
+// Artifakt Element (For Body)
+// ==========================================================================
+
+/*
+For pretty much everything else.
+- Subheads
+- Body copy
+- Bulleted information
+- Legal and caption copy
+*/
+@font-face {
+    font-family: "Artifakt Element";
+    src: url("../../fonts/artifakt/element/WOFF/Artifakt Element Heavy Italic.woff");
+    font-weight: 900;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Artifakt Element";
+    src: url("../../fonts/artifakt/element/WOFF/Artifakt Element Heavy.woff");
+    font-weight: 900;
+}
+@font-face {
+    font-family: "Artifakt Element";
+    src: url("../../fonts/artifakt/element/WOFF/Artifakt Element Black Italic.woff");
+    font-weight: 800;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Artifakt Element";
+    src: url("../../fonts/artifakt/element/WOFF/Artifakt Element Black.woff");
+    font-weight: 800;
+}
+@font-face {
+    font-family: "Artifakt Element";
+    src: url("../../fonts/artifakt/element/WOFF/Artifakt Element Bold Italic.woff");
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Artifakt Element";
+    src: url("../../fonts/artifakt/element/WOFF/Artifakt Element Bold.woff");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Artifakt Element";
+    src: url("../../fonts/artifakt/element/WOFF/Artifakt Element Medium Italic.woff");
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Artifakt Element";
+    src: url("../../fonts/artifakt/element/WOFF/Artifakt Element Medium.woff");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Artifakt Element";
+    src: url("../../fonts/artifakt/element/WOFF/Artifakt Element Book Italic.woff");
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Artifakt Element";
+    src: url("../../fonts/artifakt/element/WOFF/Artifakt Element Book.woff");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Artifakt Element";
+    src: url("../../fonts/artifakt/element/WOFF/Artifakt Element Italic.woff");
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Artifakt Element";
+    src: url("../../fonts/artifakt/element/WOFF/Artifakt Element Regular.woff");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Artifakt Element";
+    src: url("../../fonts/artifakt/element/WOFF/Artifakt Element Light Italic.woff");
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Artifakt Element";
+    src: url("../../fonts/artifakt/element/WOFF/Artifakt Element Light.woff");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Artifakt Element";
+    src: url("../../fonts/artifakt/element/WOFF/Artifakt Element Thin Italic.woff");
+    font-weight: 200;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Artifakt Element";
+    src: url("../../fonts/artifakt/element/WOFF/Artifakt Element Thin.woff");
+    font-weight: 200;
+}
+@font-face {
+    font-family: "Artifakt Element";
+    src: url("../../fonts/artifakt/element/WOFF/Artifakt Element Hair Italic.woff");
+    font-weight: 100;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Artifakt Element";
+    src: url("../../fonts/artifakt/element/WOFF/Artifakt Element Hair.woff");
+    font-weight: 100;
+}
+
+
+
+// ==========================================================================
+// Artifakt Legend (For Headings)
+// ==========================================================================
+
+/*
+When you need me to make a statement,
+get noticed, or just generally show off.
+- Headlines
+- Product and event logotypes
+*/
+@font-face {
+    font-family: "Artifakt Legend";
+    src: url("../../fonts/artifakt/legend/WOFF/Artifakt Legend Heavy Italic.woff");
+    font-weight: 900;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Artifakt Legend";
+    src: url("../../fonts/artifakt/legend/WOFF/Artifakt Legend Heavy.woff");
+    font-weight: 900;
+}
+@font-face {
+    font-family: "Artifakt Legend";
+    src: url("../../fonts/artifakt/legend/WOFF/Artifakt Legend Black Italic.woff");
+    font-weight: 800;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Artifakt Legend";
+    src: url("../../fonts/artifakt/legend/WOFF/Artifakt Legend Black.woff");
+    font-weight: 800;
+}
+@font-face {
+    font-family: "Artifakt Legend";
+    src: url("../../fonts/artifakt/legend/WOFF/Artifakt Legend Bold Italic.woff");
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Artifakt Legend";
+    src: url("../../fonts/artifakt/legend/WOFF/Artifakt Legend Bold.woff");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Artifakt Legend";
+    src: url("../../fonts/artifakt/legend/WOFF/Artifakt Legend Medium Italic.woff");
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Artifakt Legend";
+    src: url("../../fonts/artifakt/legend/WOFF/Artifakt Legend Medium.woff");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Artifakt Legend";
+    src: url("../../fonts/artifakt/legend/WOFF/Artifakt Legend Book Italic.woff");
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Artifakt Legend";
+    src: url("../../fonts/artifakt/legend/WOFF/Artifakt Legend Book.woff");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Artifakt Legend";
+    src: url("../../fonts/artifakt/legend/WOFF/Artifakt Legend Italic.woff");
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Artifakt Legend";
+    src: url("../../fonts/artifakt/legend/WOFF/Artifakt Legend Regular.woff");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Artifakt Legend";
+    src: url("../../fonts/artifakt/legend/WOFF/Artifakt Legend Light Italic.woff");
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Artifakt Legend";
+    src: url("../../fonts/artifakt/legend/WOFF/Artifakt Legend Light.woff");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Artifakt Legend";
+    src: url("../../fonts/artifakt/legend/WOFF/Artifakt Legend Thin Italic.woff");
+    font-weight: 200;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Artifakt Legend";
+    src: url("../../fonts/artifakt/legend/WOFF/Artifakt Legend Thin.woff");
+    font-weight: 200;
+}
+@font-face {
+    font-family: "Artifakt Legend";
+    src: url("../../fonts/artifakt/legend/WOFF/Artifakt Legend Hair Italic.woff");
+    font-weight: 100;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Artifakt Legend";
+    src: url("../../fonts/artifakt/legend/WOFF/Artifakt Legend Hair.woff");
+    font-weight: 100;
+}

@@ -5,27 +5,23 @@
 @import "mixins";
 @import "grid";
 
-// Layout
-@import "layout/layout";
-@import "layout/views";
-
 // Blocks
+@import "blocks/logo";
 @import "blocks/hero";
+@import "blocks/fonts";
 @import "blocks/menu";
+@import "blocks/buttons";
+@import "blocks/push-menu";
+@import "blocks/forms";
 @import "blocks/header";
+@import "blocks/typebase";
+@import "blocks/tables";
+@import "blocks/well";
+@import "blocks/pattern";
+
 // Font
 @import url(http://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,700|Roboto:400,700);
-
-
-// Body
-body {
-}
 
 body {
    @include display-breakpoint;
 }
-
-* {
-   box-sizing: border-box;
-}
-

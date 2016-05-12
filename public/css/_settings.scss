@@ -1,17 +1,26 @@
+// ==========================================================================
 // Settings
-$base-line-height:			24px;
+// ==========================================================================
+$base-line-height:		24px;
 $base-font-size:			14px;
 $base-font-color:			#333;
-$custom-font-color:			#333;
-$base-font:					"Roboto", "Open Sans", "helvetica", "arial";
-$custom-font:				"Roboto", "Lora", "helvetica", "arial";
+$custom-font-color:		#333;
 
-$primary-color:             #008CBA;
-$secondary-color:           #e7e7e7;
+$base-font:					  "Artifakt Element", "Open Sans", "helvetica", "arial";
+$custom-font:				  "Artifakt Legend", "Open Sans", "helvetica", "arial";
 
-$link-color:             	$primary-color;
-$link-color-hover:        	lighten($primary-color, 10%);
+$primary-color:      #e72433;
+$secondary-color:    #e7e7e7;
 
-$white:						#FFFFFF;
-$black:                 	#000000;
-$gray:                  	#666666;
+$link-color:         $primary-color;
+$link-color-hover:   lighten($primary-color, 10%);
+
+$white:						   #FFFFFF;
+$black:              #000000;
+$gray:               #666666;
+
+
+* {
+  box-sizing: border-box;
+}
+

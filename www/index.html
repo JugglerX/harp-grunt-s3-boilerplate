@@ -6,23 +6,20 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600" rel="stylesheet" type="text/css" />
-		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.dropotron.js"></script>
-		<noscript>
-
-		</noscript>
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/push-menu.js"></script>
+		<script src="/js/prism.js"></script>
 		<link href="/css/style.css" type="text/css" rel="stylesheet" >
+		<link href="/css/vendor/prism.css" type="text/css" rel="stylesheet" >
+		<link href="/css/vendor/hamburgers.css" type="text/css" rel="stylesheet" >
 	</head>
 
 	
 	<body class="homepage">
-
-		<!-- Header Wrapper -->
-		<div class="header">
+			<div class="header">
 	<div class="row">
-	<div class="columns small-12"
-		<div class="logo"><a href="/index">Telephasic</a></div>
+	<div class="columns small-12">
+		<div class="logo__text"><a href="/index">Harp</a></div>
 		<ul class="menu">
 			<li class="active"><a href="/">Index</a>
 			<li class=""><a href="/docs/grid">Grid</a></li>
@@ -32,9 +29,28 @@
 </div>
 
 
-		<div class="wrapper">
+			<nav class="pushmenu">
+  <a href="#">Home</a>
+  <a href="#">Nav2</a>
+  <a href="#">Nav3</a>
+  <a href="#">Nav4</a>
+  <a href="#">Nav5</a>
+  <a href="#">Nav6</a>
+  <a href="#">Nav7</a>
+</nav>
 
-	<div class="hero">
+
+<div id="pushmenu-toggle" class="pushmenu-toggle">
+  <button class="hamburger hamburger--spin" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+</div>
+
+
+
+			<div class="hero">
 		<div class="row">
 			<div class="column small-12">
 				<h1>Hero</h1>
@@ -50,11 +66,6 @@
 		</div>
 	</div>
 
-</div>
-
-		<!-- Footer Wrapper -->
-		<p>FOOTER</p>
-
-
+			
 	</body>
 </html>

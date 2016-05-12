@@ -1,0 +1,46 @@
+// ==========================================================================
+// Logo
+// ==========================================================================
+.logo__image {
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  float: left;
+  margin: 10px 0 10px 0;
+  img {
+    display: none;
+  }
+  @media #{$medium-up} {
+    background-image: url("../images/logo.jpg");
+    background-size: 30px 30px;
+  }
+  @media #{$small-only} {
+    background-image: url("../images/logo-mobile.jpg");
+    background-size: 30px 30px;
+  }
+  a {
+    padding-left: 40px;
+    line-height: 30px;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: $custom-font;
+    text-decoration: none;
+    color: #333;
+    text-transform: uppercase;
+  }
+}
+
+.logo__text {
+  float: left;
+  margin: 10px 0 10px 0;
+  a {
+    line-height: 36px;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: $custom-font;
+    text-decoration: none;
+    color: #333;
+    text-transform: uppercase;
+  }
+}
+

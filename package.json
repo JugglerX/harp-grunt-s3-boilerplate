@@ -1,0 +1,27 @@
+{
+  "name": "harp",
+  "version": "1.0.0",
+  "description": "* https://github.com/itzaks/harp-browser-sync-browserify - Harp with browser-sync and browserify\r * http://broccoli-taco.com/documentation/#page-folder",
+  "main": "index.js",
+  "dependencies": {
+    "harp": "^0.20.3"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-aws-s3": "^0.14.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "harp compile && grunt harp-html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JugglerX/harp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JugglerX/harp/issues"
+  },
+  "homepage": "https://github.com/JugglerX/harp#readme"
+}

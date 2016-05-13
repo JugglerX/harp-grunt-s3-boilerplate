@@ -1,5 +1,5 @@
 // ==========================================================================
-// Pattern Library
+// Docs
 // ==========================================================================
 .row.display {
   background: #eee;
@@ -31,66 +31,14 @@
   background: #d4d4d4; }
 
 
-.pattern {
-  code {
-    background: none;
-    border: none;
-    background-color: none;
-    border-color: none;
-    padding: 0;
-  }
+.docs {
 
-  pre {
-    font-size: 13px;
-    line-height: 16px;
-  }
 }
-.pattern__header {
-  background: #FAFAFA;
-  padding: 10px 0 10px 0;
-  box-shadow: 1px 1px 6px #CCC;
-}
-.pattern__logo {
-  width: 120px;
-}
-.pattern__logo-text {
-  color: #666;
-  line-height: 32px;
-  font-weight: 500;
+
+.docs__html, .docs__rendered {
   text-transform: uppercase;
-}
-.pattern__middle {
-  padding: 40px 0 40px 0;
-}
-.pattern__sidebar {
-  background: #FAFAFA;
-  padding: 32px 20px;
-}
-
-.pattern h4 {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  font-weight: 900;
-  line-height: 1.4;
-  color: #222222;
-  font-style: normal;
-  margin-bottom: 0.5rem;
-  margin-top: 0.2rem;
-  text-rendering: optimizeLegibility;
-}
-
-.tier--dropdown {
-  li {
-    font-size: 12px !important;
-    padding: 5px !important;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    a {
-      display: inline-block !important;
-    }
-  }
-}
-.tier li {
-  font-size: 13px;
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 0;
+  font-weight: 800;
 }

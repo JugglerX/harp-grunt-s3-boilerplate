@@ -1,5 +1,6 @@
 {
   "globals": {
+     "baseurl": "/",
     "lang": "en",
     "url": "",
     "site": "HarpStart",

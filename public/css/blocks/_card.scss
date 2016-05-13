@@ -1,0 +1,269 @@
+/* ==========================================================================
+   Cards /components/_card.scss
+   ========================================================================== */
+/*
+   Cards Header & Footer
+   ========================================================================== */
+.cards {
+  @include clearfix;
+  .header, .cards-header {
+    @include clearfix;
+    //padding-top: ($column-gutter / 2);
+    //padding-left: ($column-gutter / 2);
+    //padding-right: ($column-gutter / 2);
+  }
+  .title, .cards-title {
+    font-size: rem-calc(16);
+    text-transform: uppercase;
+    margin: 0;
+    margin-top: 14px;
+    float: left;
+  }
+  .count {
+    color: #333;
+  } 
+  .cards-count {
+    font-size: 20px;
+    color: #333;
+  }
+  .no-items {
+        margin: 10px 0 20px 0;
+    }
+  .sort {
+    // padding-left: ($column-gutter / 2);
+    // padding-right: ($column-gutter / 2);
+    float: right;
+    select, .form-item {
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+  }
+  .footer, .cards-footer {
+    @include clearfix;
+    padding-top: ($column-gutter / 2);
+    padding-left: ($column-gutter / 2);
+    clear: both;
+    #search-pager {
+      padding: 0;
+    }
+    .see-all {
+      float: right;
+    }
+  }
+}
+
+/*
+Card
+========================================================================== */
+.card {
+  padding-top: rem-calc(15);
+  padding-bottom: rem-calc(15);
+  &:focus {
+    outline: 0;
+  }
+  .card-inner {
+    background-color:white;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.23);
+  }
+  .header {
+    padding: rem-calc(10) rem-calc(12) 0;
+    height: auto;
+    overflow: hidden;
+    h3 {
+      font-size: rem-calc(22);
+      font-weight: 200;
+      line-height: rem-calc(24);
+      color: #327084;
+      max-height:rem-calc(48);
+      height:rem-calc(48);
+      overflow: hidden;
+      margin: 0;
+    }
+
+    @media #{$medium-up}{
+      height: rem-calc(60);
+    }
+  }
+  .dateline {
+    padding: 0 rem-calc(12);
+    height: rem-calc(25);
+    overflow: hidden;
+    h5 {
+      font-size: rem-calc(13);
+      margin: 0;
+    }
+  }
+  .meta {
+    padding: 0 rem-calc(12);
+    font-size: rem-calc(13);
+    height: rem-calc(32);
+    // truncate string if it spans 2 lines, otherwise the cards do not float correctly
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: rem-calc(1.5);
+    span {
+      font-size: rem-calc(13);
+    }
+  }
+  .copy-small {
+    padding: 0 rem-calc(12);
+    height: rem-calc(30);
+    overflow: hidden;
+    margin-bottom: rem-calc(4);
+    p {
+      font-size: rem-calc(13);
+      margin-bottom: 0;
+      line-height: rem-calc(15);
+      font-weight: 200;
+      height: rem-calc(30);
+      overflow: hidden;
+    }
+  }
+  .copy-large {
+    padding: 0 rem-calc(12);
+    height: rem-calc(211);
+    overflow: hidden;
+    margin-bottom: 3px;
+    p {
+      font-size: rem-calc(13);
+      margin-bottom: rem-calc(25);
+      line-height: 1.3;
+      font-weight: 200;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .media {
+    height: rem-calc(180);
+    overflow: hidden;
+    img {
+      min-width: 100%;
+    }
+    + .author {
+      border-top: 0;
+    }
+  }
+  .link {
+    padding: rem-calc(8) rem-calc(12) 0;
+    height: rem-calc(57);
+    overflow: hidden;
+    a {
+      font-size: rem-calc(13);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    p {
+      font-size: rem-calc(13);
+      margin: 0;
+      font-weight: 200;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .author {
+    border-top: rem-calc(1) solid rgb(237,237,237);
+    padding: rem-calc(8) rem-calc(12) 0;
+    height: rem-calc(57);
+    overflow: hidden;
+    img {
+      float: left;
+      width: rem-calc(41);
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+    }
+    h5 {
+      font-size: rem-calc(13);
+      margin: 5px 0 0 0;
+      line-height: rem-calc(18);
+      margin-left: rem-calc(50);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-left:3px;
+    }
+    p {
+      font-size: rem-calc(13);
+      margin: 0;
+      line-height: 1.1;
+      margin-left: rem-calc(50);
+      font-weight: 200;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-left:3px;
+    }
+  }
+  .footer {
+    background-color: rgb(237,237,237);
+    padding: rem-calc(8) rem-calc(12) 0;
+    height:rem-calc(30);
+    &:after {
+      content:'';
+      display:block;
+      clear: both;
+    }
+    p {
+      font-weight: 200;
+      font-size: rem-calc(13);
+      line-height: 22px;
+      width: 77%;
+      float: left;
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    span.likes_icon {
+      margin: 0;
+      display: inline;
+      float: right;
+      line-height: 1;
+      font-size: rem-calc(13);
+      &:before {
+        content: url($icon-thumbs-up);
+        height: 14px;
+        width: 14px;
+        margin-right: 4px;
+      }
+    }
+  }
+  
+  .collection-card-edit-options {
+    background-color: #454545;
+    height: 2.35rem;
+    padding: 0.5rem 0.75rem 0;
+    .collection-delete {
+        cursor: pointer;
+        float: left;
+        &:after {
+            content: url("/sites/all/modules/custom/autodesk_contributions/assets/collection_icons/delete_white.png");
+        }
+    }
+    .collection-reorder {
+        cursor: move;
+        float: right;
+        &:after {
+            content: url("/sites/all/modules/custom/autodesk_contributions/assets/collection_icons/move_white.png");
+        }
+    }
+  }
+}
+
+
+/*
+   No Results
+   ========================================================================== */
+.no-results {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  h1 {
+    font-size: 50px;
+    color: #666;
+  }
+}

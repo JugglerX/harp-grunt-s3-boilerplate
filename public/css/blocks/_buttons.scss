@@ -1,120 +1,127 @@
-// Button
-// --------------------------------------------------
-.btn {
-  background: #333;
+// ==========================================================================
+// Buttons
+// ==========================================================================
+.button {
   display: inline-block;
-  padding: 4px 10px 4px;
-  margin-bottom: 0;
-  font-size: 12px;
-  color: #fff;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  border: none;
-  text-transform: uppercase;
-  font-weight: 300;
-  @include border-radius(3px);
-  @include box-shadow();
-  @include transition(background,.15s,linear);
-  &:hover {
+  position: relative;
+  text-decoration: none;
+  font-weight: 200;
+  text-align: left;
+  padding: 8px 13px 10px 13px;
+  background: $primary-color;
+  &:link, &:visited {
     color: #FFF;
-    text-decoration: none;
-    background-color: darken(#333, 10%);
-    @include transition(background .15s linear);
   }
-}
-
-// Button Sizes
-// --------------------------------------------------
-
-// Small
-.btn-small {
-  padding: 5px 10px;
-  font-size: 11px;
-}
-
-// Normal
-.btn-normal {
-  padding: 8px 14px;
-  font-size: 14px;
-  font-weight: 700;
-}
-// meduium
-.btn-medium {
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: 700;
-}
-// Large
-.btn-large {
-  padding: 12px 22px;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-// Full-Width
-.btn-full {
-  padding: 13px 24px;
-  font-size: 14px;
-  display: block;
-}
-.btn-minimal {
-  padding: 13px 24px;
-  font-size: 14px;
-  text-transform: uppercase;
-  background: none;
-  color: $secondary-color;
-  font-weight: 700;
-}
-.btn-clear {
-  background: none;
-  border: none;
-  -webkit-appearance: none;
-  margin: 0;
-  padding: 0;
-  height: auto;
-  text-indent: 0;
-  font-size: 12px;
-  color: $primary-color;
-  vertical-align: baseline;
-  cursor: pointer;
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-// Button Colours
-// --------------------------------------------------
-.btn-primary {
-  background-color: $primary-color;
-  color: #FFF;
-  &:hover {
+  &:hover, &:focus {
     background-color: darken($primary-color, 10%);
-    color: #FFF;
+    text-decoration: none;
+  }
+  // Theme
+  &.secondary {
+    background-color: $secondary-color;
+  }
+  &.cancel {
+    background-color: #6e706f;
+  }
+  // Sizes
+  &.full {
+    padding: 11px 15px 10px 15px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  &.small {
+    padding: 6px 11px 5px 11px;
+  }
+  &.medium {
+    padding: 11px 15px 10px 15px;
+  }
+  &.large {
+    padding: 16px 20px 15px 20px;
+  }
+  // Modifications
+  &.align-left {
+    text-align: left;
+  }
+  &.center, &.align-center {
+    text-align: center;
+  }
+  // Icons
+  &.button-back, &.back {
+    padding-left: 34px;
+    &:after {
+      position: absolute;
+      content: "\f104";
+      width: 14px;
+      top: 45%;
+      left: 0.9rem;
+      color: white;
+      display: inline-block;
+      font-family: $font-awesome;
+      vertical-align: middle;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+  &.arrow {
+    padding-right: 34px;
+    &:after {
+      position: absolute;
+      content: "\f105";
+      width: 14px;
+      top: 44%;
+      right: 0.5rem;
+      color: white;
+      display: inline-block;
+      font-family: 'FontAwesome';
+      vertical-align: middle;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+  &.no-arrow {
+    padding: 11px 15px 10px 15px;
+    &:after {
+      content: "";
+    }
+  }
+  &.button-external, &.external {
+    padding-right: 34px;
+    background-image: url(../images/standard/external-link-white.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% + -14px) 45%;;
+  }
+
+  &.button-right, &.right {
+    float: right;
+  }
+  &.button-left, &.left {
+    float: left;
+  }
+  &.full-on-mobile {
+    @media #{$small-only} {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  &.no-margin {
+    margin: 0;
+  }
+  &.no-bottom-margin, &.no-margin-bottom {
+    margin-bottom: 0;
+  }
+  // font-awesome padding
+  .fa {
+    margin-left: 8px;
+  }
+  &.edit-contribution-button {
+    display:block;
+    margin-bottom: 10px;
+    @media #{$small-only} {
+        float : none;
+        margin-bottom: 15px;
+    }
   }
 }
-
-.btn-secondary {
-  background-color: $secondary-color;
-  color: $primary-color;
-  &:hover {
-    background-color: darken($secondary-color, 10%);
-    color: $primary-color;
-  }
-}
-
-// Form Buttons
-// --------------------------------------------------
-input.form-submit {
-      @extend .btn;
-      margin-right: 10px;
-      text-indent: 0;
-}
-input.form-submit.disabled {
-  cursor: default;
-  color: #666;
-  background-color: #EAEAEA;
-}
-
-
-

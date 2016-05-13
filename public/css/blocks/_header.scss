@@ -1,23 +1,24 @@
 // ==========================================================================
 // Header
 // ==========================================================================
+$header-height: 60px;
+
 .header {
   background-color: #FFF;
-  min-height: 59px;
+  min-height: $header-height;
   width: 100%;
   border-bottom: 1px solid #CCC;
+  @media #{$small-only} {
+    padding-left: 70px;
+  }
 }
 .header--fixed {
 	z-index: 50;
 	position: fixed;
   top: 0;
 	box-shadow: 0 2px 9px rgba(0,0,0,0.20);
-	@media #{$small-only} {
-		position: relative;
-		top: 0;
-	}
 }
 
-body.header--fixed {
-  margin-top: 50px;
+body.body__header--fixed {
+  margin-top: $header-height;
 }

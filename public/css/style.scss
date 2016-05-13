@@ -1,11 +1,18 @@
-@import "functions";
+// Core
+@import "foundation/functions";
 @import "settings";
 @import "reset";
 @import "breakpoints";
 @import "mixins";
-@import "grid";
+
+// Foundation
+@import "foundation/components/grid";
+@import "foundation/components/global";
+@import "foundation/components/reveal";
+@import "foundation/components/visibility";
 
 // Blocks
+@import "blocks/content";
 @import "blocks/logo";
 @import "blocks/hero";
 @import "blocks/fonts";
@@ -14,13 +21,17 @@
 @import "blocks/push-menu";
 @import "blocks/forms";
 @import "blocks/header";
-@import "blocks/typebase";
+@import "blocks/type";
 @import "blocks/tables";
 @import "blocks/well";
 @import "blocks/pattern";
+@import "blocks/panel";
+@import "blocks/poster";
+@import "blocks/modal";
 
 // Font
 @import url(http://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,700|Roboto:400,700);
+@import "fontawesome/scss/font-awesome";
 
 body {
    @include display-breakpoint;

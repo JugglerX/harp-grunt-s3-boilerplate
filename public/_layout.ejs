@@ -6,22 +6,32 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600" rel="stylesheet" type="text/css" />
-		<script src="/js/jquery.min.js"></script>
-		<script src="/js/push-menu.js"></script>
-		<script src="/js/prism.js"></script>
-		<link href="/css/style.css" type="text/css" rel="stylesheet" >
-		<link href="/css/vendor/prism.css" type="text/css" rel="stylesheet" >
-		<link href="/css/vendor/hamburgers.css" type="text/css" rel="stylesheet" >
+		<script src="<%- baseurl %>js/vendor/modernizr.js"></script>
+		<script src="<%- baseurl %>js/jquery-2.2.3.min.js"></script>
+		<script src="<%- baseurl %>js/prism.js"></script>
+		<script src="<%- baseurl %>js/push-menu.js"></script>
+		<link href="<%- baseurl %>css/style.css" type="text/css" rel="stylesheet" >
+		<link href="<%- baseurl %>css/vendor/prism.css" type="text/css" rel="stylesheet" >
+		<link href="<%- baseurl %>css/vendor/hamburgers.css" type="text/css" rel="stylesheet" >
 	</head>
 
 	<% var className = (current.source == 'index') ? "homepage" : current.source; %>
-	<body class="<%- className %>">
-			<%- partial("_partials/header") %>
+	<body class="body__header--fixed <%- className %>">
+		<%- partial("_partials/header") %>
+		<%- partial("_partials/push-menu") %>
+		<div class="content">
+			<div class="row">
+				<div class="columns small-12">
+					<%- yield %>
+				</div>
+			</div>
+		</div>
+		<%- partial("_shared/footer") %>
 
-			<%- partial("_partials/push-menu") %>
-
-			<%- yield %>
-
-			<%- partial("_shared/footer") %>
+		<!-- Foundation Scripts -->
+		<script src="<%- baseurl %>js/foundation/foundation.js"></script>
+		<script src="<%- baseurl %>js/foundation/foundation.reveal.js"></script>
+		<script src="<%- baseurl %>js/foundation/foundation.equalizer.js"></script>
+		<script src="<%- baseurl %>js/foundation-init.js"></script>
 	</body>
 </html>

@@ -1,18 +1,11 @@
-/*! Typebase.less v0.1.0 | MIT License */
-
-// Typesetting variables. Edit these!
-$baseFontSize: 16; // in pixels. This would result in 22px on desktop
-$baseLineHeight: 1.5; // how large the line height is as a multiple of font size
-$leading: $baseLineHeight * 1rem;
-
+$leading: $base-line-height * 1rem;
 // Rate of growth for headings
-// I actually like this to be slightly smaller then the leading. Makes for tight headings.
 $scale: 1.414;
 
 /* Setup */
 html {
 	font-family: $base-font;
-  font-size: $baseFontSize / 16 * 100%;
+  font-size: $base-font-size / 16 * 100%;
   color: #333;
   // Make everything look a little nicer in webkit
   -webkit-font-smoothing: antialiased;
@@ -92,7 +85,7 @@ table {
   border-collapse: collapse;
   td, th {
   	 padding: 0;
-    line-height: $baseLineHeight * $baseFontSize - 0px;
+    line-height: $base-line-height * $base-font-size - 0px;
   }
 }
 
@@ -104,4 +97,57 @@ table {
 /* Hug a the block above you */
 .hug {
   margin-top: 0;
+}
+
+
+// HR
+hr, .hr { border: 0; border-bottom: 1px solid #CCC; display: block;}
+
+/* Basscss Typography */
+
+.font-family-inherit { font-family: inherit }
+.font-size-inherit { font-size: inherit }
+.text-decoration-none { text-decoration: none }
+
+.bold    { font-weight: var(--bold-font-weight, bold) }
+.regular { font-weight: normal }
+.italic  { font-style: italic }
+.caps    { text-transform: uppercase; letter-spacing: var(--caps-letter-spacing); }
+
+.left-align   { text-align: left }
+.center       { text-align: center }
+.right-align  { text-align: right }
+.justify      { text-align: justify }
+
+.nowrap { white-space: nowrap }
+.break-word { word-wrap: break-word }
+
+.line-height-1 { line-height: var(--line-height-1) }
+.line-height-2 { line-height: var(--line-height-2) }
+.line-height-3 { line-height: var(--line-height-3) }
+.line-height-4 { line-height: var(--line-height-4) }
+
+.list-style-none { list-style: none }
+.underline { text-decoration: underline }
+
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-reset {
+  list-style: none;
+  padding-left: 0;
+}
+
+:root {
+  --line-height-1: 1;
+  --line-height-2: 1.125;
+  --line-height-3: 1.25;
+  --line-height-4: 1.5;
+  --letter-spacing: 1;
+  --caps-letter-spacing: .2em;
+  --bold-font-weight: bold;
 }

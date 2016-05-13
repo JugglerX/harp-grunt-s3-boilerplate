@@ -2,3 +2,6 @@
 *.sass-cache/
 public/fonts/
 www/fonts/
+www
+node_modules
+config.codekit

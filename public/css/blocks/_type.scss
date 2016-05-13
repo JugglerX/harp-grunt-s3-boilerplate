@@ -1,91 +1,67 @@
-/* ==========================================================================
-   Paragraph
-   ========================================================================== */
+// ==========================================================================
+// Typeography
+// ==========================================================================
+$leading: $base-line-height;
+
+// Paragraph
 p {
 	color: $base-font-color;
 	font-family: $base-font;
 	font-size: $base-font-size;
 	line-height: $base-line-height;
-	margin: 0 0 20px 0;
-	@media #{$medium-only} {
-		font-size: $base-font-size - 2;
-	}
+	margin: 0;
+	margin-top: 18px;
 }
 
 img {
   @include img-responsive();
-  //vertical-align: bottom;
-}
-a img {
-  //@include img-glow();
 }
 
-
-/* ==========================================================================
-   Content Headings
-   ========================================================================== */
+// Headings
 h1	{
 	font-family: $custom-font;
-	font-size: 42px;
-	line-height: 1.2;
+	font-size: 56px;
+	line-height: 42px;
 	font-weight: 300;
 	color: $base-font-color;
-	padding: 0;
-	margin: 0 0 20px 0;
-	@media #{$medium-only} {
-		font-size: 32px;
-	}
-	@media #{$small-only} {
-		font-size: 30px;
-	}
+	margin-top: $leading;
 }
-
 h2	{
 	font-family: $custom-font;
 	font-size: 26px;
-	line-height: 28px;
+	line-height: 32px;
 	font-weight: 500;
 	color: $base-font-color;
-	padding: 0;
-	margin: 0 0 10px 0;
-	@media #{$medium-only} {
-		font-size: 28px;
-	}
-	@media #{$small-only} {
-		font-size: 22px;
-	}
+	margin-top: $leading;
 }
 h3	{
 	font-family: $custom-font;
-	font-size: 18px;
+	font-size: 20px;
+	line-height: 26px;
 	font-weight: 700;
 	color: $base-font-color;
-	padding: 0;
-	margin: 0;
+	margin-top: $leading;
 }
 h4	{
 	font-family: $custom-font;
 	font-size: 16px;
 	font-weight: 700;
 	color: $base-font-color;
-	padding: 0;
-	margin: 0;
+	margin-top: $leading;
 }
 h5	{
 	font-family: $custom-font;
 	font-size: 12px;
 	font-weight: 700;
 	color: $base-font-color;
-	padding: 0;
-	margin: 0;
+	margin-top: $leading;
 }
 h6	{
 	font-family: $custom-font;
 	font-size: 11px;
 	font-weight: 700;
 	color: $base-font-color;
-	padding: 0;
-	margin: 0;
+	margin-top: $leading;
 }
 
 // List
@@ -94,26 +70,22 @@ ol 							{ color: $base-font-color; margin: 0 0 20px 0; list-style: decimal; }
 li 							{ color: $base-font-color; margin: 0 0 7px 0px; list-style-type: disc; padding: 0;}
 
 // Emphasis
-strong 					{ font-weight: bold; }
+strong 				{ font-weight: bold; }
 em 						{ font-style: italic; }
 
 // Blockquote
 blockquote, .blockquote {
 	margin: 0 0 20px 0;
 	padding: 14px;
-	//float: right;
-	//width: 300px;
 	background: lighten($gray,55%);
 	color: $primary-color;
 	font-size: 18px;
 	line-height: 1.5;
 	font-weight: 200;
 	font-style: normal;
-	//border-left: 4px solid lighten($primary-color,40%);
 	p {
 		margin: 0;
 		padding: 0;
-		//color: $primary-color;
 		font-size: 18px;
 		line-height: 24px;
 		font-weight: 200;
@@ -128,23 +100,65 @@ blockquote, .blockquote {
 		}
 	}
 }
-
-
-code {
-  background: none;
-  border: none;
-  background-color: none;
-  border-color: none;
-  padding: 0;
+p {
+	code {
+	  background: #F5F2F0;
+	  font-weight: 500;
+	  color: #666;
+	  padding: 1px;
+	  border-radius: 1px;
+	}
 }
+
 
 pre {
   font-size: 13px;
   line-height: 16px;
 }
 
-
 // HR
-hr, .hr					{ border: 0; border-bottom: 2px solid $gray; display: block;}
+hr, .hr	{
+	border: 0;
+	border-bottom: 1px solid #CCC;
+	display: block;
+}
+.lead {
+	margin-top: 50px;
+}
+// Hug a the block above you
+.hug {
+  margin-top: 0;
+}
 
+// Base Classes
+.font-family-inherit { font-family: inherit; }
+.font-size-inherit { font-size: inherit; }
+.text-decoration-none { text-decoration: none; }
 
+.bold    { font-weight: 700; }
+.regular { font-weight: normal; }
+.italic  { font-style: italic; }
+.caps    { text-transform: uppercase; }
+
+.left-align   { text-align: left; }
+.center       { text-align: center; }
+.right-align  { text-align: right; }
+.justify      { text-align: justify; }
+
+.nowrap { white-space: nowrap; }
+.break-word { word-wrap: break-word; }
+
+.list-style-none { list-style: none; }
+.underline { text-decoration: underline; }
+
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-reset {
+  list-style: none;
+  padding-left: 0;
+}

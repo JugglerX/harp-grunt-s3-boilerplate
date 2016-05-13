@@ -11,7 +11,7 @@ $screen: "only screen" !default;
 
 $landscape: "(orientation: landscape)" !default;
 $portrait: "(orientation: portrait)" !default;
- 
+
 $small-up: $screen !default;
 $small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})" !default;
 
@@ -72,3 +72,6 @@ $xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max
     }
   }
 }
+
+
+

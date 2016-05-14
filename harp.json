@@ -1,17 +1,5 @@
 {
   "globals": {
-     "baseurl": "/",
-    "lang": "en",
-    "url": "",
-    "site": "HarpStart",
-    "title": "",
-    "author": "",
-    "description": "",
-    "twitter": "",
-    "favicon": "assets/images/favicon.ico",
-    "styles": [
-    ],
-    "scripts": [
-    ]
+    "baseurl": "/"
   }
 }

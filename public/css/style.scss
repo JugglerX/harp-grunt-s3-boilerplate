@@ -2,15 +2,15 @@
 @import "foundation/functions";
 @import "settings";
 @import "reset";
-@import "breakpoints";
-@import "mixins";
-
-// Foundation
+@import "breakpoints";  
+@import "mixins";    
+   
+// Foundation 
 @import "foundation/components/grid";
 @import "foundation/components/global";
 @import "foundation/components/reveal";
-@import "foundation/components/visibility";
-
+@import "foundation/components/visibility"; 
+ 
 // Blocks
 @import "blocks/content";
 @import "blocks/logo";
@@ -36,3 +36,4 @@
 body {
    @include display-breakpoint;
 }
+

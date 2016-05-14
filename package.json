@@ -1,27 +1,29 @@
 {
   "name": "harp",
-  "version": "1.0.0",
-  "description": "* https://github.com/itzaks/harp-browser-sync-browserify - Harp with browser-sync and browserify\r * http://broccoli-taco.com/documentation/#page-folder",
-  "main": "index.js",
+  "version": "1.2.0",
+  "description": "Static site builder experiments",
   "dependencies": {
     "harp": "^0.20.3"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
-    "grunt-aws-s3": "^0.14.5"
+    "load-grunt-tasks": "~3.5.0",
+    "time-grunt": "^1.2.2",
+    "grunt-aws-s3": "^0.14.5",
+    "grunt-dom-munger": "^3.4.0",
+    "grunt-contrib-jshint": "~1.0.0",
+    "grunt-contrib-uglify": "~1.0.1",
+    "grunt-contrib-watch": "~1.0.0",
+    "grunt-sass": "^1.2.0",
+    "browser-sync": "^1.3.7"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "harp compile && grunt harp"
+    "start": "harp server & browser-sync start --config bs-config.js",
+    "compile": "harp compile && grunt harp"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JugglerX/harp.git"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JugglerX/harp/issues"
-  },
-  "homepage": "https://github.com/JugglerX/harp#readme"
+  "author": "Robert Austin"
 }

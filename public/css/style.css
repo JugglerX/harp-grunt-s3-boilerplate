@@ -2684,12 +2684,23 @@ ul.menu li.expanded ul ul li a {
   background-color: #1B96D4;
 }
 
-/* line 23, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
+/* line 22, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
+.button.secondary:link, .button.secondary:visited {
+  color: #FFF;
+}
+
+/* line 25, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
+.button.secondary:hover, .button.secondary:focus {
+  background-color: #1576a7;
+  text-decoration: none;
+}
+
+/* line 30, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
 .button.cancel {
   background-color: #6e706f;
 }
 
-/* line 27, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
+/* line 34, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
 .button.full {
   padding: 11px 15px 10px 15px;
   display: block;
@@ -2697,43 +2708,63 @@ ul.menu li.expanded ul ul li a {
   text-align: center;
 }
 
-/* line 33, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
+/* line 40, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
 .button.small {
   padding: 6px 11px 5px 11px;
 }
 
-/* line 36, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
+/* line 43, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
 .button.medium {
   padding: 11px 15px 10px 15px;
 }
 
-/* line 39, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
+/* line 46, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
 .button.large {
   padding: 16px 20px 15px 20px;
 }
 
-/* line 43, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
+/* line 50, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
 .button.align-left {
   text-align: left;
 }
 
-/* line 46, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
+/* line 53, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
 .button.center, .button.align-center {
   text-align: center;
 }
 
-/* line 50, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
+/* line 57, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
 .button.button-back, .button.back {
   padding-left: 34px;
 }
 
-/* line 52, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
+/* line 59, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
 .button.button-back:after, .button.back:after {
   position: absolute;
   content: "\f104";
   width: 14px;
-  top: 45%;
+  top: 0.65rem;
   left: 0.9rem;
+  color: #FFF;
+  display: inline-block;
+  font-family: "FontAwesome";
+  vertical-align: middle;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+/* line 73, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
+.button.arrow {
+  padding-right: 34px;
+}
+
+/* line 75, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
+.button.arrow:after {
+  position: absolute;
+  content: "\f105";
+  width: 14px;
+  top: 0.65rem;
+  right: 0.5rem;
   color: white;
   display: inline-block;
   font-family: "FontAwesome";
@@ -2742,56 +2773,38 @@ ul.menu li.expanded ul ul li a {
   line-height: 20px;
 }
 
-/* line 66, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
-.button.arrow {
-  padding-right: 34px;
+/* line 89, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
+.button.button-external, .button.external {
+  padding-right: 40px;
 }
 
-/* line 68, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
-.button.arrow:after {
+/* line 91, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
+.button.button-external:after, .button.external:after {
   position: absolute;
-  content: "\f105";
+  content: "\f08e";
   width: 14px;
-  top: 44%;
-  right: 0.5rem;
+  top: 0.65rem;
+  right: 0.8rem;
   color: white;
   display: inline-block;
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
   vertical-align: middle;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
 }
 
-/* line 82, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
-.button.no-arrow {
-  padding: 11px 15px 10px 15px;
-}
-
-/* line 84, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
-.button.no-arrow:after {
-  content: "";
-}
-
-/* line 88, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
-.button.button-external, .button.external {
-  padding-right: 34px;
-  background-image: url(../images/standard/external-link-white.png);
-  background-repeat: no-repeat;
-  background-position: calc(100% + -14px) 45%;
-}
-
-/* line 95, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
+/* line 106, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
 .button.button-right, .button.right {
   float: right;
 }
 
-/* line 98, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
+/* line 109, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
 .button.button-left, .button.left {
   float: left;
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 101, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
+  /* line 112, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
   .button.full-on-mobile {
     float: none;
     display: block;
@@ -2800,33 +2813,19 @@ ul.menu li.expanded ul ul li a {
   }
 }
 
-/* line 109, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
+/* line 120, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
 .button.no-margin {
   margin: 0;
 }
 
-/* line 112, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
+/* line 123, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
 .button.no-bottom-margin, .button.no-margin-bottom {
   margin-bottom: 0;
 }
 
-/* line 116, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
+/* line 127, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
 .button .fa {
   margin-left: 8px;
-}
-
-/* line 119, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
-.button.edit-contribution-button {
-  display: block;
-  margin-bottom: 10px;
-}
-
-@media only screen and (max-width: 767px) {
-  /* line 119, /Users/rob/Projects/harp/public/css/blocks/_buttons.scss */
-  .button.edit-contribution-button {
-    float: none;
-    margin-bottom: 15px;
-  }
 }
 
 /* line 6, /Users/rob/Projects/harp/public/css/blocks/_push-menu.scss */
@@ -3202,13 +3201,24 @@ p {
 }
 
 /* line 16, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+a {
+  color: #3BBBAD;
+  text-decoration: underline;
+}
+
+/* line 19, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+a:hover {
+  color: #236d65;
+}
+
+/* line 24, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-/* line 21, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 29, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 h1 {
   font-family: "Artifakt Legend", "Open Sans", "helvetica", "arial";
   font-size: 56px;
@@ -3218,7 +3228,7 @@ h1 {
   margin-top: 24px;
 }
 
-/* line 29, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 37, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 h2 {
   font-family: "Artifakt Legend", "Open Sans", "helvetica", "arial";
   font-size: 26px;
@@ -3228,7 +3238,7 @@ h2 {
   margin-top: 24px;
 }
 
-/* line 37, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 45, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 h3 {
   font-family: "Artifakt Legend", "Open Sans", "helvetica", "arial";
   font-size: 20px;
@@ -3238,7 +3248,7 @@ h3 {
   margin-top: 24px;
 }
 
-/* line 45, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 53, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 h4 {
   font-family: "Artifakt Legend", "Open Sans", "helvetica", "arial";
   font-size: 16px;
@@ -3247,7 +3257,7 @@ h4 {
   margin-top: 24px;
 }
 
-/* line 52, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 60, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 h5 {
   font-family: "Artifakt Legend", "Open Sans", "helvetica", "arial";
   font-size: 12px;
@@ -3256,7 +3266,7 @@ h5 {
   margin-top: 24px;
 }
 
-/* line 59, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 67, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 h6 {
   font-family: "Artifakt Legend", "Open Sans", "helvetica", "arial";
   font-size: 11px;
@@ -3265,7 +3275,7 @@ h6 {
   margin-top: 24px;
 }
 
-/* line 68, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 76, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 ul {
   color: #333;
   margin: 10px 0 30px 0;
@@ -3273,14 +3283,14 @@ ul {
   padding: 0 0 0 14px;
 }
 
-/* line 69, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 77, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 ol {
   color: #333;
   margin: 0 0 20px 0;
   list-style: decimal;
 }
 
-/* line 70, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 78, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 li {
   color: #333;
   margin: 0 0 7px 0px;
@@ -3288,17 +3298,17 @@ li {
   padding: 0;
 }
 
-/* line 73, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 81, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 74, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 82, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 em {
   font-style: italic;
 }
 
-/* line 77, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 85, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 blockquote, .blockquote {
   margin: 0 0 20px 0;
   padding: 14px;
@@ -3310,7 +3320,7 @@ blockquote, .blockquote {
   font-style: normal;
 }
 
-/* line 86, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 94, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 blockquote p, .blockquote p {
   margin: 0;
   padding: 0;
@@ -3320,19 +3330,19 @@ blockquote p, .blockquote p {
   font-style: normal;
 }
 
-/* line 93, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 101, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 blockquote p em, .blockquote p em {
   font-style: normal;
 }
 
-/* line 96, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 104, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 blockquote p:first-of-type, .blockquote p:first-of-type {
   font-size: inherit;
   line-height: inherit;
   font-weight: inherit;
 }
 
-/* line 104, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 112, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 p code {
   background: #F5F2F0;
   font-weight: 500;
@@ -3341,105 +3351,105 @@ p code {
   border-radius: 1px;
 }
 
-/* line 114, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 122, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 pre {
   font-size: 13px;
   line-height: 16px;
 }
 
-/* line 120, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 128, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 hr, .hr {
   border: 0;
   border-bottom: 1px solid #CCC;
   display: block;
 }
 
-/* line 125, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 133, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 .lead {
   margin-top: 50px;
 }
 
-/* line 129, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 137, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 .hug {
   margin-top: 0;
 }
 
-/* line 134, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 142, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 .font-family-inherit {
   font-family: inherit;
 }
 
-/* line 135, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 143, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 .font-size-inherit {
   font-size: inherit;
 }
 
-/* line 136, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 144, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 .text-decoration-none {
   text-decoration: none;
 }
 
-/* line 138, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 146, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 .bold {
   font-weight: 700;
 }
 
-/* line 139, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 147, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 .regular {
   font-weight: normal;
 }
 
-/* line 140, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 148, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 .italic {
   font-style: italic;
 }
 
-/* line 141, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 149, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 .caps {
   text-transform: uppercase;
 }
 
-/* line 143, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 151, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 .left-align {
   text-align: left;
 }
 
-/* line 144, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 152, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 .center {
   text-align: center;
 }
 
-/* line 145, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 153, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 .right-align {
   text-align: right;
 }
 
-/* line 146, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 154, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 .justify {
   text-align: justify;
 }
 
-/* line 148, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 156, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 .nowrap {
   white-space: nowrap;
 }
 
-/* line 149, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 157, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 .break-word {
   word-wrap: break-word;
 }
 
-/* line 151, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 159, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 .list-style-none {
   list-style: none;
 }
 
-/* line 152, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 160, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 .underline {
   text-decoration: underline;
 }
 
-/* line 154, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 162, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 .truncate {
   max-width: 100%;
   overflow: hidden;
@@ -3447,231 +3457,189 @@ hr, .hr {
   white-space: nowrap;
 }
 
-/* line 161, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
+/* line 169, /Users/rob/Projects/harp/public/css/blocks/_type.scss */
 .list-reset {
   list-style: none;
   padding-left: 0;
 }
 
-/* line 10, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
+/* line 13, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
 table {
-  max-width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
+  background-color: transparent;
 }
 
-/* line 19, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table {
-  width: 100%;
-  margin-bottom: 14px;
+/* line 16, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
+caption {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #CCC;
+  text-align: left;
 }
 
 /* line 22, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table thead {
-  background: #3BBBAD;
-  color: #1B96D4;
-  font-weight: 700;
+th {
+  text-align: left;
 }
 
-/* line 28, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table th,
-.table td {
-  padding: 5px;
+/* line 29, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+/* line 38, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
+.table > thead > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > th,
+.table > tbody > tr > td,
+.table > tfoot > tr > th,
+.table > tfoot > tr > td {
+  padding: 8px;
   line-height: 24px;
-  text-align: left;
   vertical-align: top;
   border-top: 1px solid #ddd;
 }
 
-/* line 36, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table th {
-  font-weight: bold;
-}
-
-/* line 40, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table thead th {
+/* line 48, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
+.table > thead > tr > th {
   vertical-align: bottom;
+  border-bottom: 2px solid #ddd;
 }
 
-/* line 44, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table thead:first-child tr th,
-.table thead:first-child tr td {
+/* line 57, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
+.table > caption + thead > tr:first-child > th,
+.table > caption + thead > tr:first-child > td,
+.table > colgroup + thead > tr:first-child > th,
+.table > colgroup + thead > tr:first-child > td,
+.table > thead:first-child > tr:first-child > th,
+.table > thead:first-child > tr:first-child > td {
   border-top: 0;
 }
 
-/* line 49, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table tbody + tbody {
+/* line 64, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
+.table > tbody + tbody {
   border-top: 2px solid #ddd;
 }
 
-/* line 54, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table-white {
-  width: 100%;
-  margin-bottom: 14px;
+/* line 69, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
+.table .table {
+  background-color: #FFF;
 }
 
-/* line 58, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table-white th,
-.table-white td {
-  padding: 8px;
-  line-height: 24px;
-  text-align: left;
-  vertical-align: top;
-  border-top: 2px solid #FFF;
-}
-
-/* line 66, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table-white th {
-  font-weight: bold;
-}
-
-/* line 70, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table-white thead th {
-  vertical-align: bottom;
-}
-
-/* line 74, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table-white thead:first-child tr th,
-.table-white thead:first-child tr td {
-  border-top: 0;
-}
-
-/* line 79, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table-white tbody + tbody {
-  border-top: 2px solid #FFF;
-}
-
-/* line 89, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table-condensed th,
-.table-condensed td {
-  padding: 4px 5px;
+/* line 82, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
+.table-condensed > thead > tr > th,
+.table-condensed > thead > tr > td,
+.table-condensed > tbody > tr > th,
+.table-condensed > tbody > tr > td,
+.table-condensed > tfoot > tr > th,
+.table-condensed > tfoot > tr > td {
+  padding: 5px;
 }
 
 /* line 95, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table-square {
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
+.table-bordered {
+  border: 1px solid #ddd;
 }
 
 /* line 101, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table-bordered {
+.table-bordered > thead > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > th,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > th,
+.table-bordered > tfoot > tr > td {
   border: 1px solid #ddd;
-  border-collapse: separate;
-  *border-collapse: collapsed;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
 }
 
-/* line 106, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table-bordered th + th,
-.table-bordered td + td,
-.table-bordered th + td,
-.table-bordered td + th {
-  border-left: 1px solid #ddd;
+/* line 108, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
+.table-bordered > thead > tr > th,
+.table-bordered > thead > tr > td {
+  border-bottom-width: 2px;
 }
 
-/* line 113, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table-bordered thead:first-child tr:first-child th,
-.table-bordered tbody:first-child tr:first-child th,
-.table-bordered tbody:first-child tr:first-child td {
-  border-top: 0;
-}
-
-/* line 119, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table-bordered thead:first-child tr:first-child th:first-child,
-.table-bordered tbody:first-child tr:first-child td:first-child {
-  -webkit-border-radius: 4px 0 0 0;
-  -moz-border-radius: 4px 0 0 0;
-  border-radius: 4px 0 0 0;
-}
-
-/* line 123, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table-bordered thead:first-child tr:first-child th:last-child,
-.table-bordered tbody:first-child tr:first-child td:last-child {
-  -webkit-border-radius: 0 4px 0 0;
-  -moz-border-radius: 0 4px 0 0;
-  border-radius: 0 4px 0 0;
-}
-
-/* line 128, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table-bordered thead:last-child tr:last-child th:first-child,
-.table-bordered tbody:last-child tr:last-child td:first-child {
-  -webkit-border-radius: 0 0 0 4px;
-  -moz-border-radius: 0 0 0 4px;
-  border-radius: 0 0 0 4px;
+/* line 121, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f9f9f9;
 }
 
 /* line 132, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table-bordered thead:last-child tr:last-child th:last-child,
-.table-bordered tbody:last-child tr:last-child td:last-child {
-  -webkit-border-radius: 0 0 4px 0;
-  -moz-border-radius: 0 0 4px 0;
-  border-radius: 0 0 4px 0;
+.table-hover > tbody > tr:hover {
+  background-color: #f5f5f5;
 }
 
-/* line 139, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table-bordered-white {
-  border: 1px solid #FFF;
-  border-collapse: separate;
-  *border-collapse: collapsed;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+/* line 142, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
+table col[class*="col-"] {
+  position: static;
+  float: none;
+  display: table-column;
 }
 
-/* line 144, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table-bordered-white th + th,
-.table-bordered-white td + td,
-.table-bordered-white th + td,
-.table-bordered-white td + th {
-  border-left: 2px solid #FFF;
+/* line 150, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
+table td[class*="col-"],
+table th[class*="col-"] {
+  position: static;
+  float: none;
+  display: table-cell;
 }
 
-/* line 151, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table-bordered-white thead:first-child tr:first-child th,
-.table-bordered-white tbody:first-child tr:first-child th,
-.table-bordered-white tbody:first-child tr:first-child td {
-  border-top: 0;
+/* line 165, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
+.table-responsive {
+  overflow-x: auto;
+  min-height: 0.01%;
 }
 
-/* line 157, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table-bordered-white thead:first-child tr:first-child th:first-child,
-.table-bordered-white tbody:first-child tr:first-child td:first-child {
-  -webkit-border-radius: 4px 0 0 0;
-  -moz-border-radius: 4px 0 0 0;
-  border-radius: 4px 0 0 0;
-}
-
-/* line 161, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table-bordered-white thead:first-child tr:first-child th:last-child,
-.table-bordered-white tbody:first-child tr:first-child td:last-child {
-  -webkit-border-radius: 0 4px 0 0;
-  -moz-border-radius: 0 4px 0 0;
-  border-radius: 0 4px 0 0;
-}
-
-/* line 166, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table-bordered-white thead:last-child tr:last-child th:first-child,
-.table-bordered-white tbody:last-child tr:last-child td:first-child {
-  -webkit-border-radius: 0 0 0 4px;
-  -moz-border-radius: 0 0 0 4px;
-  border-radius: 0 0 0 4px;
-}
-
-/* line 170, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table-bordered-white thead:last-child tr:last-child th:last-child,
-.table-bordered-white tbody:last-child tr:last-child td:last-child {
-  -webkit-border-radius: 0 0 4px 0;
-  -moz-border-radius: 0 0 4px 0;
-  border-radius: 0 0 4px 0;
-}
-
-/* line 182, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
-.table-striped tbody tr:nth-child(odd) td,
-.table-striped tbody tr:nth-child(odd) th {
-  background-color: #f9f9f9;
+@media only screen and (max-width: 767px) {
+  /* line 165, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
+  .table-responsive {
+    width: 100%;
+    margin-bottom: 20px;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #ddd;
+  }
+  /* line 177, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
+  .table-responsive > .table {
+    margin-bottom: 0;
+  }
+  /* line 185, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
+  .table-responsive > .table > thead > tr > th,
+  .table-responsive > .table > thead > tr > td,
+  .table-responsive > .table > tbody > tr > th,
+  .table-responsive > .table > tbody > tr > td,
+  .table-responsive > .table > tfoot > tr > th,
+  .table-responsive > .table > tfoot > tr > td {
+    white-space: nowrap;
+  }
+  /* line 194, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
+  .table-responsive > .table-bordered {
+    border: 0;
+  }
+  /* line 202, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
+  .table-responsive > .table-bordered > thead > tr > th:first-child,
+  .table-responsive > .table-bordered > thead > tr > td:first-child,
+  .table-responsive > .table-bordered > tbody > tr > th:first-child,
+  .table-responsive > .table-bordered > tbody > tr > td:first-child,
+  .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+  .table-responsive > .table-bordered > tfoot > tr > td:first-child {
+    border-left: 0;
+  }
+  /* line 206, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
+  .table-responsive > .table-bordered > thead > tr > th:last-child,
+  .table-responsive > .table-bordered > thead > tr > td:last-child,
+  .table-responsive > .table-bordered > tbody > tr > th:last-child,
+  .table-responsive > .table-bordered > tbody > tr > td:last-child,
+  .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+  .table-responsive > .table-bordered > tfoot > tr > td:last-child {
+    border-right: 0;
+  }
+  /* line 219, /Users/rob/Projects/harp/public/css/blocks/_tables.scss */
+  .table-responsive > .table-bordered > tbody > tr:last-child > th,
+  .table-responsive > .table-bordered > tbody > tr:last-child > td,
+  .table-responsive > .table-bordered > tfoot > tr:last-child > th,
+  .table-responsive > .table-bordered > tfoot > tr:last-child > td {
+    border-bottom: 0;
+  }
 }
 
 /* line 4, /Users/rob/Projects/harp/public/css/blocks/_well.scss */
@@ -3788,63 +3756,75 @@ table {
 }
 
 /* line 11, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
+.panel.panel--padding {
+  padding: 15px;
+}
+
+/* line 14, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
 .panel.panel--border-left {
   border-left: 1px solid #CCC;
 }
 
-/* line 14, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
+/* line 17, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
 .panel.panel--border {
   border-style: solid;
   border-width: 1px;
   border-color: #d8d8d8;
 }
 
-/* line 19, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
+/* line 22, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
+.panel.panel--border-dashed {
+  border-style: dashed;
+  border-width: 1px;
+  border-color: #d8d8d8;
+}
+
+/* line 27, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
 .panel.panel--background {
   background-position: bottom right;
   background-repeat: no-repeat;
 }
 
-/* line 23, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
+/* line 31, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
 .panel.panel--solid {
   background-color: #E5E5E5;
   padding: 1.25rem;
 }
 
-/* line 27, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
+/* line 35, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
 .panel.panel--glow {
   cursor: pointer;
   transition: background-color 300ms ease-out, 0.2s 300ms ease-out, ease-in-out 300ms ease-out;
   padding: 1.25rem;
 }
 
-/* line 31, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
+/* line 39, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
 .panel.panel--glow:hover {
   background-color: #3BBBAD;
 }
 
-/* line 33, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
+/* line 41, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
 .panel.panel--glow:hover h1, .panel.panel--glow:hover h2, .panel.panel--glow:hover h3, .panel.panel--glow:hover h4, .panel.panel--glow:hover h5, .panel.panel--glow:hover p {
   color: #FFF;
 }
 
-/* line 37, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
+/* line 45, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
 .panel.panel--glow h1, .panel.panel--glow h2, .panel.panel--glow h3, .panel.panel--glow h4, .panel.panel--glow h5, .panel.panel--glow p {
   transition: color 300ms ease-out, 0.2s 300ms ease-out, ease-in-out 300ms ease-out;
 }
 
-/* line 42, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
+/* line 50, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
 .panel .panel__title.panel__title--small {
   font-size: 18px;
   font-weight: bold;
 }
 
-/* line 49, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
+/* line 57, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
 .panel ul {
   list-style-position: inside;
 }
 
-/* line 52, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
+/* line 60, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
 .panel .panel__wrapper-link {
   display: block;
   position: absolute;
@@ -4119,6 +4099,11 @@ body.modal-open {
 /* line 164, /Users/rob/Projects/harp/public/css/blocks/_modal.scss */
 .reveal-modal--responsive-iframe .reveal-modal__body {
   overflow: hidden;
+}
+
+/* line 4, /Users/rob/Projects/harp/public/css/blocks/_base.css */
+.clear {
+  clear: both;
 }
 
 /*!

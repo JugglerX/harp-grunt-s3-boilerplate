@@ -1,5 +1,5 @@
 // ==========================================================================
-// Typeography
+// Typography
 // ==========================================================================
 $leading: $base-line-height;
 
@@ -11,6 +11,14 @@ p {
 	line-height: $base-line-height;
 	margin: 0;
 	margin-top: 18px;
+}
+
+a {
+	color: $primary-color;
+	text-decoration: underline;
+	&:hover {
+		color: darken($primary-color, 20%);
+	}
 }
 
 img {
@@ -65,13 +73,13 @@ h6	{
 }
 
 // List
-ul	 						{ color: $base-font-color; margin: 10px 0 30px 0; list-style: disc; padding: 0 0 0 14px }
-ol 							{ color: $base-font-color; margin: 0 0 20px 0; list-style: decimal; }
-li 							{ color: $base-font-color; margin: 0 0 7px 0px; list-style-type: disc; padding: 0;}
+ul	 				{ color: $base-font-color; margin: 10px 0 30px 0; list-style: disc; padding: 0 0 0 14px }
+ol 					{ color: $base-font-color; margin: 0 0 20px 0; list-style: decimal; }
+li 					{ color: $base-font-color; margin: 0 0 7px 0px; list-style-type: disc; padding: 0;}
 
 // Emphasis
 strong 				{ font-weight: bold; }
-em 						{ font-style: italic; }
+em 					{ font-style: italic; }
 
 // Blockquote
 blockquote, .blockquote {

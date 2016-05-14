@@ -1,9 +1,5 @@
-<div class="row">
-<div class="columns small-12">
 <h1>Equalizer</h1>
 <h2>Create equal height columns without using minimum-height.</h2>
-s
-
 
 <div class="row" data-equalizer>
     <div class="medium-4 columns">
@@ -30,8 +26,8 @@ s
 <p>You can create an equal height container using a few data attributes. Apply the <code>data-equalizer</code> attribute to a parent container. Then apply the <code>data-equalizer-watch</code> attribute to each element you'd like to have an equal height. The height of <code>data-equalizer-watch</code> attribute will be equal to that of the tallest element.</p>
 <div class="row">
     <div class="large-6 columns">
-        <h4 class="sg">HTML</h4>
-<pre><code class="language-html">&lt;div class="row collapse" data-equalizer="">
+        <h4 class="docs__html">HTML</h4>
+<pre><code class="language-html">&lt;div class="row collapse" data-equalizer="" data-options="equalize_on_stack: true”>
     &lt;div class="large-6 columns ">
         &lt;div class="panel panel--border" data-equalizer-watch="">
             &lt;p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.&lt;/p>
@@ -46,7 +42,7 @@ s
 
     </div>
     <div class="large-6 columns">
-        <h4 class="sg">Rendered HTML</h4>
+        <h4 class="docs__html">Rendered HTML</h4>
         <div class="row collapse" data-equalizer="">
             <div class="large-6 columns ">
                 <div class="panel panel--border" data-equalizer-watch="">
@@ -61,11 +57,7 @@ s
         </div>
     </div>
 </div>
-s
+
 <h2>Stacked Columns</h2>
 <p>If you have a grid of columns (more than 1 row) you need to apply the following option</p>
-
 <pre><code class="language-html">&lt;div class="row" data-equalizer="" data-options="equalize_on_stack: true”></code></pre>
-
-</div>
-</div>

@@ -19,6 +19,13 @@
   // Theme
   &.secondary {
     background-color: $secondary-color;
+    &:link, &:visited {
+      color: #FFF;
+    }
+    &:hover, &:focus {
+      background-color: darken($secondary-color, 10%);
+      text-decoration: none;
+    }
   }
   &.cancel {
     background-color: #6e706f;
@@ -53,9 +60,9 @@
       position: absolute;
       content: "\f104";
       width: 14px;
-      top: 45%;
+      top: 0.65rem;
       left: 0.9rem;
-      color: white;
+      color: #FFF;
       display: inline-block;
       font-family: $font-awesome;
       vertical-align: middle;
@@ -69,27 +76,31 @@
       position: absolute;
       content: "\f105";
       width: 14px;
-      top: 44%;
+      top: 0.65rem;
       right: 0.5rem;
       color: white;
       display: inline-block;
-      font-family: 'FontAwesome';
+      font-family: $font-awesome;
       vertical-align: middle;
       font-size: 20px;
       line-height: 20px;
     }
   }
-  &.no-arrow {
-    padding: 11px 15px 10px 15px;
-    &:after {
-      content: "";
-    }
-  }
   &.button-external, &.external {
-    padding-right: 34px;
-    background-image: url(../images/standard/external-link-white.png);
-    background-repeat: no-repeat;
-    background-position: calc(100% + -14px) 45%;;
+    padding-right: 40px;
+    &:after {
+      position: absolute;
+      content: "\f08e";
+      width: 14px;
+      top: 0.65rem;
+      right: 0.8rem;
+      color: white;
+      display: inline-block;
+      font-family: $font-awesome;
+      vertical-align: middle;
+      font-size: 16px;
+      line-height: 20px;
+    } 
   }
 
   &.button-right, &.right {
@@ -115,13 +126,5 @@
   // font-awesome padding
   .fa {
     margin-left: 8px;
-  }
-  &.edit-contribution-button {
-    display:block;
-    margin-bottom: 10px;
-    @media #{$small-only} {
-        float : none;
-        margin-bottom: 15px;
-    }
   }
 }

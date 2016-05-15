@@ -10,12 +10,14 @@
 		<script src="<%- baseurl %>js/jquery-2.2.3.min.js"></script>
 		<script src="<%- baseurl %>js/prism.js"></script>
 		<script src="<%- baseurl %>js/push-menu.js"></script>
+
 		<link href="<%- baseurl %>css/style.css" type="text/css" rel="stylesheet" >
 		<link href="<%- baseurl %>css/vendor/prism.css" type="text/css" rel="stylesheet" >
 		<link href="<%- baseurl %>css/vendor/hamburgers.css" type="text/css" rel="stylesheet" >
+
 	</head>
 
-	<% var className = (current.source == 'index') ? "homepage" : current.source; %>
+	<% var className = (current.source == 'index') ? "homepage" : "page-" + current.source; %>
 	<body class="body__header--fixed <%- className %>">
 		<%- partial("_partials/header") %>
 		<%- partial("_partials/push-menu") %>
@@ -30,6 +32,7 @@
 
 		<!-- Foundation Scripts -->
 		<script src="<%- baseurl %>js/foundation/foundation.js"></script>
+		<script src="<%- baseurl %>js/foundation/foundation.tooltip.js"></script>
 		<script src="<%- baseurl %>js/foundation/foundation.reveal.js"></script>
 		<script src="<%- baseurl %>js/foundation/foundation.equalizer.js"></script>
 		<script src="<%- baseurl %>js/foundation-init.js"></script>

@@ -10,11 +10,11 @@
 @import "foundation/components/global";
 @import "foundation/components/reveal";
 @import "foundation/components/visibility"; 
+@import "foundation/components/tooltips"; 
  
 // Blocks
-@import "blocks/content";
+@import "blocks/content"; 
 @import "blocks/logo";
-@import "blocks/hero";
 @import "blocks/fonts";
 @import "blocks/menu";
 @import "blocks/buttons";
@@ -22,11 +22,12 @@
 @import "blocks/forms";
 @import "blocks/header";
 @import "blocks/type";
+@import "blocks/truncate";
 @import "blocks/tables";
 @import "blocks/well";
 @import "blocks/pattern";
-@import "blocks/panel";
 @import "blocks/poster";
+@import "blocks/card";
 @import "blocks/modal";
 @import "blocks/base";
 

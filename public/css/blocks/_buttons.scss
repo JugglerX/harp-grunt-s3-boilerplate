@@ -10,7 +10,7 @@
   padding: 8px 13px 10px 13px;
   background: $primary-color;
   &:link, &:visited {
-    color: #FFF;
+    color: #FFF; 
   }
   &:hover, &:focus {
     background-color: darken($primary-color, 10%);

@@ -1,42 +1,45 @@
 <h1>Cards</h1>
 <h4 class="docs__html">HTML</h4>
 
-<h1><%= [0].id %></h1>
-<% public.docs.cards._data.cards.forEach(function(card) { %>
+<h1><%= title %></h1>
+<% public.docs.cards._data.cards.results.forEach(function(card) { %>
     <li><%= card.title %></li>
+<% }); %>
+
+<div class="row cards">
+
+    <div class="cards__header small-12 column">
+        <h2 class="cards__title">Cards<span class="cards__count"> (<a href="#">8</a>)</span></h2>
+    </div>
+    <% results.forEach(function(card, index) { %>
+
+        <div class="card small-12 small-medium-4 medium-3 large-3 columns end">
+            <div class="card__inner">
+                <div class="card__header">
+                    <h3><a href="<%= card.link %>"><%= card.title %></a></h3>
+                </div>
+                <div class="card__date">
+                    <h5><%= card.date %></h5>
+                </div>
+                <div class="card__body">
+                    <%= card.body %>
+                </div>
+                <div class="card__image">
+               
+                    <img src="/images/unsplash/<%= public.images.unsplash._contents[index] %>">
+                </div>
+                <div class="card__category">
+                    <% card.category.forEach(function(category) { %>
+                        <%= category %>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+
     <% }); %>
 
-<div class="row cards" id="articles">
-
-    <div class="cards-header small-12 column">
-        <h2 class="title">Articles<span> (<a href="/profile/H0IVG0XZC26PJ/articles">8</a>)</span></h2>
-    </div>
-
-    <div class="card card-simplecontent small-12 small-medium-4 medium-3 large-3 columns end">
-        <div class="card-inner">
-            <div class="header">
-                <h3><a href="https://knowledge-local.autodesk.com/support/3ds-max/getting-started/caas/simplecontent/content/kimaya-1.html">kimaya-1</a></h3>
-            </div>
-            <div class="dateline">
-                <h5>Mar 25 2016</h5>
-            </div>
-            <div class="copy-small">
-                <p>n scfm nxcmxdsvdsgfdsgdsffgsd...</p>
-            </div>
-            <div class="media">
-                <img src="//akn-aknsite-article-thumbnails.s3.amazonaws.com/e57d85ad-8195-404e-bfe3-ad3a8db47ff7.jpg">
-            </div>
-            <div class="footer">
-                <p>3ds Max 2015 | Article</p>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="cards-footer">
-        <div class="column">
-            <a class="see-all" href="/profile/H0IVG0XZC26PJ/articles">See all my articles</a>
-        </div>
+    <div class="cards__footer small-12 column">
+        <a href="#">See all cards</a>
     </div>
 
 </div>

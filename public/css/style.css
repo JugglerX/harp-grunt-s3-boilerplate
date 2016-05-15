@@ -2235,6 +2235,124 @@ th.hide-for-touch {
   }
 }
 
+/* Tooltips */
+/* line 38, /Users/rob/Projects/harp/public/css/foundation/components/_tooltips.scss */
+.has-tip {
+  border-bottom: dotted 1px #CCCCCC;
+  color: #333333;
+  cursor: help;
+  font-weight: bold;
+}
+
+/* line 44, /Users/rob/Projects/harp/public/css/foundation/components/_tooltips.scss */
+.has-tip:hover, .has-tip:focus {
+  border-bottom: dotted 1px #1b544e;
+  color: #3BBBAD;
+}
+
+/* line 50, /Users/rob/Projects/harp/public/css/foundation/components/_tooltips.scss */
+.has-tip.tip-left, .has-tip.tip-right {
+  float: none !important;
+}
+
+/* line 54, /Users/rob/Projects/harp/public/css/foundation/components/_tooltips.scss */
+.tooltip {
+  background: #333333;
+  color: #FFFFFF;
+  display: none;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.3;
+  max-width: 300px;
+  padding: 0.75rem;
+  position: absolute;
+  width: 100%;
+  z-index: 1006;
+  left: 50%;
+}
+
+/* line 68, /Users/rob/Projects/harp/public/css/foundation/components/_tooltips.scss */
+.tooltip > .nub {
+  border: solid 5px;
+  border-color: transparent transparent #333333 transparent;
+  display: block;
+  height: 0;
+  pointer-events: none;
+  position: absolute;
+  top: -10px;
+  width: 0;
+  left: 5px;
+}
+
+/* line 79, /Users/rob/Projects/harp/public/css/foundation/components/_tooltips.scss */
+.tooltip > .nub.rtl {
+  left: auto;
+  right: 5px;
+}
+
+/* line 85, /Users/rob/Projects/harp/public/css/foundation/components/_tooltips.scss */
+.tooltip.radius {
+  border-radius: 3px;
+}
+
+/* line 88, /Users/rob/Projects/harp/public/css/foundation/components/_tooltips.scss */
+.tooltip.round {
+  border-radius: 1000px;
+}
+
+/* line 90, /Users/rob/Projects/harp/public/css/foundation/components/_tooltips.scss */
+.tooltip.round > .nub {
+  left: 2rem;
+}
+
+/* line 95, /Users/rob/Projects/harp/public/css/foundation/components/_tooltips.scss */
+.tooltip.opened {
+  border-bottom: dotted 1px #1b544e !important;
+  color: #3BBBAD !important;
+}
+
+/* line 101, /Users/rob/Projects/harp/public/css/foundation/components/_tooltips.scss */
+.tap-to-close {
+  color: #777777;
+  display: block;
+  font-size: 0.625rem;
+  font-weight: normal;
+}
+
+@media only screen {
+  /* line 110, /Users/rob/Projects/harp/public/css/foundation/components/_tooltips.scss */
+  .tooltip > .nub {
+    border-color: transparent transparent #333333 transparent;
+    top: -10px;
+  }
+  /* line 114, /Users/rob/Projects/harp/public/css/foundation/components/_tooltips.scss */
+  .tooltip.tip-top > .nub {
+    border-color: #333333 transparent transparent transparent;
+    bottom: -10px;
+    top: auto;
+  }
+  /* line 120, /Users/rob/Projects/harp/public/css/foundation/components/_tooltips.scss */
+  .tooltip.tip-left, .tooltip.tip-right {
+    float: none !important;
+  }
+  /* line 123, /Users/rob/Projects/harp/public/css/foundation/components/_tooltips.scss */
+  .tooltip.tip-left > .nub {
+    border-color: transparent transparent transparent #333333;
+    left: auto;
+    margin-top: -5px;
+    right: -10px;
+    top: 50%;
+  }
+  /* line 130, /Users/rob/Projects/harp/public/css/foundation/components/_tooltips.scss */
+  .tooltip.tip-right > .nub {
+    border-color: transparent #333333 transparent transparent;
+    left: -10px;
+    margin-top: -5px;
+    right: auto;
+    top: 50%;
+  }
+}
+
 /* line 1, /Users/rob/Projects/harp/public/css/blocks/_content.scss */
 .content {
   padding-top: 30px;
@@ -2305,12 +2423,6 @@ th.hide-for-touch {
   .logo__text {
     text-align: left;
   }
-}
-
-/* line 4, /Users/rob/Projects/harp/public/css/blocks/_hero.scss */
-.hero {
-  padding: 40px 0 40px 0;
-  color: rgba(255, 255, 255, 0.75);
 }
 
 /*
@@ -3738,103 +3850,6 @@ table th[class*="col-"] {
   font-weight: 800;
 }
 
-/* line 1, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
-.panel {
-  position: relative;
-}
-
-/* line 3, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
-.panel.panel--spine {
-  padding-left: 80px;
-}
-
-/* line 5, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
-.panel.panel--spine .panel__image {
-  position: absolute;
-  top: 0px;
-  left: 30px;
-}
-
-/* line 11, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
-.panel.panel--padding {
-  padding: 15px;
-}
-
-/* line 14, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
-.panel.panel--border-left {
-  border-left: 1px solid #CCC;
-}
-
-/* line 17, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
-.panel.panel--border {
-  border-style: solid;
-  border-width: 1px;
-  border-color: #d8d8d8;
-}
-
-/* line 22, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
-.panel.panel--border-dashed {
-  border-style: dashed;
-  border-width: 1px;
-  border-color: #d8d8d8;
-}
-
-/* line 27, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
-.panel.panel--background {
-  background-position: bottom right;
-  background-repeat: no-repeat;
-}
-
-/* line 31, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
-.panel.panel--solid {
-  background-color: #E5E5E5;
-  padding: 1.25rem;
-}
-
-/* line 35, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
-.panel.panel--glow {
-  cursor: pointer;
-  transition: background-color 300ms ease-out, 0.2s 300ms ease-out, ease-in-out 300ms ease-out;
-  padding: 1.25rem;
-}
-
-/* line 39, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
-.panel.panel--glow:hover {
-  background-color: #3BBBAD;
-}
-
-/* line 41, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
-.panel.panel--glow:hover h1, .panel.panel--glow:hover h2, .panel.panel--glow:hover h3, .panel.panel--glow:hover h4, .panel.panel--glow:hover h5, .panel.panel--glow:hover p {
-  color: #FFF;
-}
-
-/* line 45, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
-.panel.panel--glow h1, .panel.panel--glow h2, .panel.panel--glow h3, .panel.panel--glow h4, .panel.panel--glow h5, .panel.panel--glow p {
-  transition: color 300ms ease-out, 0.2s 300ms ease-out, ease-in-out 300ms ease-out;
-}
-
-/* line 50, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
-.panel .panel__title.panel__title--small {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-/* line 57, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
-.panel ul {
-  list-style-position: inside;
-}
-
-/* line 60, /Users/rob/Projects/harp/public/css/blocks/_panel.scss */
-.panel .panel__wrapper-link {
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-indent: -99999em;
-}
-
 /* line 6, /Users/rob/Projects/harp/public/css/blocks/_poster.scss */
 .poster {
   padding-top: 0.9375rem;
@@ -3895,6 +3910,264 @@ table th[class*="col-"] {
 .poster img {
   width: 100%;
   height: auto;
+}
+
+/* line 229, /Users/rob/Projects/harp/public/css/foundation/components/_global.scss */
+.cards:before, .cards:after {
+  content: " ";
+  display: table;
+}
+
+/* line 230, /Users/rob/Projects/harp/public/css/foundation/components/_global.scss */
+.cards:after {
+  clear: both;
+}
+
+/* line 229, /Users/rob/Projects/harp/public/css/foundation/components/_global.scss */
+.cards .cards__header:before, .cards .cards__header:after {
+  content: " ";
+  display: table;
+}
+
+/* line 230, /Users/rob/Projects/harp/public/css/foundation/components/_global.scss */
+.cards .cards__header:after {
+  clear: both;
+}
+
+/* line 9, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.cards .cards__title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: 14px;
+  float: left;
+}
+
+/* line 16, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.cards .cards__count {
+  color: #333;
+}
+
+/* line 19, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.cards .cards__footer {
+  padding-top: 10px;
+  padding-left: 10px;
+  clear: both;
+}
+
+/* line 229, /Users/rob/Projects/harp/public/css/foundation/components/_global.scss */
+.cards .cards__footer:before, .cards .cards__footer:after {
+  content: " ";
+  display: table;
+}
+
+/* line 230, /Users/rob/Projects/harp/public/css/foundation/components/_global.scss */
+.cards .cards__footer:after {
+  clear: both;
+}
+
+/* line 30, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.card {
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
+}
+
+/* line 33, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.card:focus {
+  outline: 0;
+}
+
+/* line 36, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.card .card__inner {
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.23);
+}
+
+/* line 40, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.card .card__header {
+  padding: 0.625rem 0.75rem 0;
+  height: auto;
+  overflow: hidden;
+}
+
+/* line 44, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.card .card__header h3 {
+  font-size: 1.375rem;
+  font-weight: 200;
+  line-height: 1.5rem;
+  color: #327084;
+  max-height: 3rem;
+  height: 3rem;
+  overflow: hidden;
+  margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 40, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+  .card .card__header {
+    height: 3.75rem;
+  }
+}
+
+/* line 58, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.card .card__date {
+  padding: 0 0.75rem;
+  height: 1.5625rem;
+  overflow: hidden;
+}
+
+/* line 62, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.card .card__date h5 {
+  font-size: 0.8125rem;
+  margin: 0;
+}
+
+/* line 67, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.card .card__body {
+  display: block;
+  /* Fallback for non-webkit */
+  font-size: 16px;
+  line-height: 1.5;
+  height: 72px;
+  /* Fallback for non-webkit */
+  overflow: hidden;
+}
+
+@supports (-webkit-line-clamp: 3) {
+  /* line 67, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+  .card .card__body {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    height: auto;
+  }
+}
+
+/* line 70, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.card .card__image {
+  height: 11.25rem;
+  overflow: hidden;
+}
+
+/* line 73, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.card .card__image img {
+  min-width: 100%;
+}
+
+/* line 76, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.card .card__image + .author {
+  border-top: 0;
+}
+
+/* line 80, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.card .link {
+  padding: 0.5rem 0.75rem 0;
+  height: 3.5625rem;
+  overflow: hidden;
+}
+
+/* line 84, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.card .link a {
+  font-size: 0.8125rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 90, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.card .link p {
+  font-size: 0.8125rem;
+  margin: 0;
+  font-weight: 200;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 99, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.card .card__author {
+  border-top: 0.0625rem solid #ededed;
+  padding: 0.5rem 0.75rem 0;
+  height: 3.5625rem;
+  overflow: hidden;
+}
+
+/* line 104, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.card .card__author img {
+  float: left;
+  width: 2.5625rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+/* line 111, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.card .card__author h5 {
+  font-size: 0.8125rem;
+  margin: 5px 0 0 0;
+  line-height: 1.125rem;
+  margin-left: 3.125rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 3px;
+}
+
+/* line 121, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.card .card__author p {
+  font-size: 0.8125rem;
+  margin: 0;
+  line-height: 1.1;
+  margin-left: 3.125rem;
+  font-weight: 200;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 3px;
+}
+
+/* line 133, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.card .footer {
+  background-color: #ededed;
+  padding: 0.5rem 0.75rem 0;
+  height: 1.875rem;
+}
+
+/* line 137, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.card .footer:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* line 142, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.card .footer p {
+  font-weight: 200;
+  font-size: 0.8125rem;
+  line-height: 22px;
+  width: 77%;
+  float: left;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 153, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.card .footer span.likes_icon {
+  margin: 0;
+  display: inline;
+  float: right;
+  line-height: 1;
+  font-size: 0.8125rem;
+}
+
+/* line 159, /Users/rob/Projects/harp/public/css/blocks/_card.scss */
+.card .footer span.likes_icon:before {
+  height: 14px;
+  width: 14px;
+  margin-right: 4px;
 }
 
 /* line 1, /Users/rob/Projects/harp/public/css/blocks/_modal.scss */

@@ -22,12 +22,12 @@ module.exports = function(grunt) {
     aws: grunt.file.readJSON('aws-keys.json'), 
 
     dom_munger: {
-      your_target: {
+      htmllinks: {
         options: {
           suffix: {selector:'a',attribute:'href',value:'.html'},
         },
         src: 'www/**/*.html' //could be an array of files
-      },
+      }
     },
 
     sass: {
@@ -81,9 +81,25 @@ module.exports = function(grunt) {
     copy: {
       assets: {
         files: [
-          {expand: true, cwd: 'public/images/', src: ['*.*'], dest: 'sites/assets/fonts/'},
-          {expand: true, cwd: 'public/js',    src: ['*.*'], dest: 'site/js/'},
-          {expand: true, cwd: 'public/css',    src: ['*.*'], dest: 'site/css/'},
+          { expand: true, cwd: 'public/images/', src: ['*.*'], dest: 'sites/assets/fonts/'},
+          { expand: true, cwd: 'public/js',    src: ['*.*'], dest: 'site/js/'},
+          { expand: true, cwd: 'public/css',    src: ['*.*'], dest: 'site/css/'}
+        ]
+      },
+      cleanurls: {
+        files: [
+          {
+            expand: true,
+            dot: true,
+            cwd: 'www',
+            dest: 'www/',
+            src: [
+              '**/*.html'
+            ],
+            rename: function(dest, src) {
+              return dest + src.replace('.html','');
+            }
+          }
         ]
       }
     },
@@ -101,7 +117,8 @@ module.exports = function(grunt) {
               bucket: 'myharpbucket',
           },
           files: [
-              {expand: true, cwd: 'www', src: ['**'], dest: '/'}
+              {dest: '/', cwd: 'www', action: 'delete',  differential: true},
+              {action: "upload", expand: true, cwd: 'www', src: ['**'], dest: '/', differential: true}
           ]
       },
     },
@@ -122,7 +139,8 @@ module.exports = function(grunt) {
     },
 
     clean: {
-      folder: ['www/images/raw/']
+      images: ['www/images/raw/'],
+      html: ['www/**/*.html']
     },
 
     cleanempty: {
@@ -130,7 +148,7 @@ module.exports = function(grunt) {
         folders: true,
         noJunk: true
       },
-      src: ['www/css/*','www/images/raw/'],
+      src: ['www/css/*'],
     },
 
     responsive_images: {
@@ -158,7 +176,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-dom-munger');
   grunt.loadNpmTasks('grunt-aws-s3');
   // Default task(s).
-  grunt.registerTask('harp', ['dom_munger','cssmin','clean','cleanempty']);
+  grunt.registerTask('compile', ['copy:cleanurls','cssmin','cleanempty','clean:html',]);
+  grunt.registerTask('compilehtml', ['dom_munger','cssmin','clean:images']);
   grunt.registerTask('default', ['dom_munger']);
   grunt.registerTask('deploy', ['aws_s3']);
 

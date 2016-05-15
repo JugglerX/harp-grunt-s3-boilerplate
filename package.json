@@ -11,6 +11,7 @@
     "grunt-aws-s3": "^0.14.5",
     "grunt-cleanempty": "^1.0.4",
     "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^1.0.1",
     "grunt-contrib-jshint": "~1.0.0",
     "grunt-contrib-uglify": "~1.0.1",
@@ -23,7 +24,8 @@
   },
   "scripts": {
     "start": "harp server & browser-sync start --config bs-config.js",
-    "compile": "harp compile && grunt harp"
+    "compile": "harp compile && grunt compile",
+    "compilehtml": "harp compile && grunt compilehtml"
   },
   "repository": {
     "type": "git",

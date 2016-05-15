@@ -1,8 +1,9 @@
 ## Harp Static Site Experiement
 ```
 npm install
-npm start
-npm run compile
 ```
-* https://github.com/itzaks/harp-browser-sync-browserify - Harp with browser-sync and browserify
-* http://broccoli-taco.com/documentation/#page-folder
+Instead of `harp server` run `npm start` - This will launch the harp server and a browser sync server
+
+Instead of `harp compile` run `npm run compilehtml` - This will compile the harp website and update all links to .html 
+
+`grunt deploy` - Deploy to S3

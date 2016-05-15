@@ -94,14 +94,37 @@ module.exports = function(grunt) {
               {expand: true, cwd: 'www', src: ['**'], dest: '/'}
           ]
       },
-    }
+    },
+
+    cssmin: {
+      options: {
+        keepSpecialComments: 0
+      },
+      target: {
+        files: [{
+          expand: true,
+          cwd: 'www/css',
+          src: ['*.css', '!*.min.css'],
+          dest: 'www/css',
+          ext: '.css'
+        }]
+      }
+    },
+
+    cleanempty: {
+      options: {
+        folders: true,
+        noJunk: true
+      },
+      src: ['www/css/*'],
+    },
 
   });
 
   grunt.loadNpmTasks('grunt-dom-munger');
   grunt.loadNpmTasks('grunt-aws-s3');
   // Default task(s).
-  grunt.registerTask('harp', ['dom_munger']);
+  grunt.registerTask('harp', ['dom_munger','cssmin','cleanempty']);
   grunt.registerTask('default', ['dom_munger']);
   grunt.registerTask('deploy', ['aws_s3']);
 

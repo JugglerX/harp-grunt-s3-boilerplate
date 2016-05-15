@@ -1,1 +1,0 @@
-$(document).foundation({reveal:{close_on_background_click:!0,close_on_esc:!0}}),$(document).on("open.fndtn.reveal","[data-reveal]",function(){$("body").addClass("modal-open")}),$(document).on("close.fndtn.reveal","[data-reveal]",function(){$("body").removeClass("modal-open")});

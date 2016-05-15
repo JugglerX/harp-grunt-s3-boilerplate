@@ -6,16 +6,19 @@
     "harp": "^0.20.3"
   },
   "devDependencies": {
+    "browser-sync": "^1.3.7",
     "grunt": "^0.4.5",
-    "load-grunt-tasks": "~3.5.0",
-    "time-grunt": "^1.2.2",
     "grunt-aws-s3": "^0.14.5",
-    "grunt-dom-munger": "^3.4.0",
+    "grunt-cleanempty": "^1.0.4",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1",
     "grunt-contrib-jshint": "~1.0.0",
     "grunt-contrib-uglify": "~1.0.1",
     "grunt-contrib-watch": "~1.0.0",
+    "grunt-dom-munger": "^3.4.0",
     "grunt-sass": "^1.2.0",
-    "browser-sync": "^1.3.7"
+    "load-grunt-tasks": "~3.5.0",
+    "time-grunt": "^1.2.2"
   },
   "scripts": {
     "start": "harp server & browser-sync start --config bs-config.js",

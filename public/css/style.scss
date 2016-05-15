@@ -31,9 +31,13 @@
 @import "blocks/modal";
 @import "blocks/base";
 
+// Vendor
+@import "vendor/hamburgers";
+@import "vendor/prism";
+
 // Font
 @import url(http://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,700|Roboto:400,700);
-@import "fontawesome/scss/font-awesome";
+@import "fontawesome/font-awesome";
 
 body {
    @include display-breakpoint;

@@ -18,12 +18,13 @@
 @import "blocks/fonts";
 @import "blocks/menu";
 @import "blocks/buttons";
-@import "blocks/push-menu";
+@import "blocks/push-menu"; 
 @import "blocks/forms";
 @import "blocks/header";
 @import "blocks/type";
 @import "blocks/truncate";
 @import "blocks/tables";
+@import "blocks/panel"; 
 @import "blocks/well";
 @import "blocks/pattern";
 @import "blocks/poster";
@@ -36,7 +37,7 @@
 @import "vendor/prism";
 
 // Font
-@import url(http://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,700|Roboto:400,700);
+// @import url(http://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,700|Roboto:400,700);
 @import "fontawesome/font-awesome";
 
 body {

@@ -4,8 +4,17 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
 
   var jsLibs = [
+    "public/js/prism.js",
+    "public/js/push-menu.js",
 
   ];
+  var jsFoundation = [
+    "public/js/foundation/foundation.js",
+    "public/js/foundation/foundation.tooltip.js",
+    "public/js/foundation/foundation.reveal.js",
+    "public/js/foundation/foundation.equalizer.js",
+    "public/js/foundation-init.js"
+  ]
 
   // Project configuration.
   grunt.initConfig({
@@ -39,12 +48,13 @@ module.exports = function(grunt) {
         sourceMap: false,
         compress: false,
         beautify: false,
-        preserveComments: 'some',
+        preserveComments: 'false',
         mangle: false
       },
       dist: {
         files: {
-          'public/js/libs.min.js': [jsLibs]
+          'public/js/libs.min.js': [jsLibs],
+          'public/js/foundation.min.js': [jsFoundation]
         }
       }
     },
@@ -111,12 +121,36 @@ module.exports = function(grunt) {
       }
     },
 
+    clean: {
+      folder: ['www/images/raw/']
+    },
+
     cleanempty: {
       options: {
         folders: true,
         noJunk: true
       },
-      src: ['www/css/*'],
+      src: ['www/css/*','www/images/raw/'],
+    },
+
+    responsive_images: {
+      myTask: {
+        options: {
+          sizes: [{
+            width: 320,
+          },{
+            width: 640,
+          },{
+            width: 1024,
+          }]
+        },
+        files: [{
+          expand: true,
+          src: ['**/*.{jpeg,jpg,gif,png}'],
+          cwd: 'public/images/raw/',
+          custom_dest: 'public/images/processed/{%= path %}/{%= width %}'
+        }]
+      }
     },
 
   });
@@ -124,7 +158,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-dom-munger');
   grunt.loadNpmTasks('grunt-aws-s3');
   // Default task(s).
-  grunt.registerTask('harp', ['dom_munger','cssmin','cleanempty']);
+  grunt.registerTask('harp', ['dom_munger','cssmin','clean','cleanempty']);
   grunt.registerTask('default', ['dom_munger']);
   grunt.registerTask('deploy', ['aws_s3']);
 

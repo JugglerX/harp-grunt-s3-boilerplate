@@ -1,0 +1,65 @@
+// ==========================================================================
+// Panel
+// ==========================================================================
+.panel {
+  position: relative;
+  &.panel--spine {
+    padding-left: 80px;
+    .panel__image {
+      position: absolute;
+      top: 0px;
+      left: 30px;
+    }
+  }
+  &.panel--border-left {
+    border-left: 1px solid #CCC;
+  }
+  &.panel--border {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d8d8d8;
+  }
+  &.panel--background {
+    background-position: bottom right;
+    background-repeat: no-repeat;
+  }
+  &.panel--solid {
+    background-color: #E5E5E5;
+    padding: 1.25rem;
+  }
+  &.panel--glow {
+    cursor: pointer;
+    transition: background-color 300ms ease-out, 0.2s 300ms ease-out, ease-in-out 300ms ease-out;
+    padding: 1.25rem;
+    &:hover {
+      background-color: $primary-color;
+      h1,h2,h3,h4,h5,p {
+        color: #FFF;
+      }
+    }
+    h1,h2,h3,h4,h5,p {
+      transition: color 300ms ease-out, 0.2s 300ms ease-out, ease-in-out 300ms ease-out;
+    }
+  }
+  .panel__title {
+    &.panel__title--small {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+  .panel--description {}
+  .panel--button {}
+  ul {
+    list-style-position: inside;
+  }
+  .panel__wrapper-link {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-indent: -99999em;
+  }
+}
+

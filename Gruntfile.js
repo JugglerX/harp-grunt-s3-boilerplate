@@ -176,8 +176,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-dom-munger');
   grunt.loadNpmTasks('grunt-aws-s3');
   // Default task(s).
-  grunt.registerTask('compile', ['copy:cleanurls','cssmin','cleanempty','clean:html',]);
-  grunt.registerTask('compilehtml', ['dom_munger','cssmin','clean:images']);
+  
+  grunt.registerTask('compile', ['dom_munger','cssmin','clean:images']);
+  grunt.registerTask('compilecleanurls', ['copy:cleanurls','cssmin','cleanempty','clean:html',]);
   grunt.registerTask('default', ['dom_munger']);
   grunt.registerTask('deploy', ['aws_s3']);
 

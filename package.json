@@ -23,9 +23,9 @@
     "time-grunt": "^1.2.2"
   },
   "scripts": {
-    "start": "harp server & browser-sync start --config bs-config.js",
+    "server": "harp server & browser-sync start --config bs-config.js",
     "compile": "harp compile && grunt compile",
-    "compilehtml": "harp compile && grunt compilehtml"
+    "compileclean": "harp compile && grunt compileclean"
   },
   "repository": {
     "type": "git",

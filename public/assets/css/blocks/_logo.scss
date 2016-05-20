@@ -1,0 +1,79 @@
+// ==========================================================================
+// Logo
+// ==========================================================================
+.logo__image {
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  float: left;
+  margin: 10px 0 10px 0;
+  img {
+    display: none;
+  }
+  @media #{$medium-up} {
+    background-image: url("../images/logo.jpg");
+    background-size: 30px 30px;
+  }
+  @media #{$small-only} {
+    background-image: url("../images/logo-mobile.jpg");
+    background-size: 30px 30px;
+  }
+  a {
+    padding-left: 40px;
+    line-height: 30px;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: $custom-font;
+    text-decoration: none;
+    color: #333;
+    text-transform: uppercase;
+  }
+}
+
+.logo__text {
+  // text-align: center;
+  margin: 10px 0 10px 0;
+  float: left;
+  a {
+    line-height: 36px;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: $custom-font;
+    text-decoration: none;
+    color: #333;
+    text-transform: uppercase;
+  }
+}
+.logo__fusion {
+  // text-align: center;
+  margin: 10px 0 10px 0;
+  float: left;
+  img {
+    width: 26px;
+    float: left;
+  }
+  span {
+    font-size: 20px;
+    color: #333;
+    letter-spacing: .4px;
+    line-height: 40px;
+    padding-left: 10px;
+    margin-left: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-left: 1px solid grey;
+    font-family: $custom-font;
+    height: 40px;
+    display: inline-block;
+  }
+  a {
+    line-height: 36px;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: $custom-font;
+    text-decoration: none;
+    color: #333;
+    text-transform: uppercase;
+  }
+}
+

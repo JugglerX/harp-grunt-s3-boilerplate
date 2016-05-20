@@ -1,25 +1,24 @@
 module.exports = function(grunt) {
 
   require('load-grunt-tasks')(grunt);
-  require('time-grunt')(grunt);
+  //require('time-grunt')(grunt);
 
   var jsLibs = [
-    "public/js/prism.js",
-    "public/js/push-menu.js",
-
+    "public/assets/js/prism.js",
+    "public/assets/js/push-menu.js"
   ];
   var jsFoundation = [
-    "public/js/foundation/foundation.js",
-    "public/js/foundation/foundation.tooltip.js",
-    "public/js/foundation/foundation.reveal.js",
-    "public/js/foundation/foundation.equalizer.js",
-    "public/js/foundation-init.js"
-  ]
+    "public/assets/js/foundation/foundation.js",
+    "public/assets/js/foundation/foundation.tooltip.js",
+    "public/assets/js/foundation/foundation.reveal.js",
+    "public/assets/js/foundation/foundation.equalizer.js",
+    "public/assets/js/foundation-init.js"
+  ];
 
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    aws: grunt.file.readJSON('aws-keys.json'), 
+    aws: grunt.file.readJSON('aws-keys.json'),
 
     dom_munger: {
       htmllinks: {
@@ -34,13 +33,13 @@ module.exports = function(grunt) {
       options: {
         outputStyle: 'expanded',
         sourceComments: true,
-        sourceMap: false,
+        sourceMap: false
       },
       style: {
         files: {
-          'public/css/style.css': 'public/css/style.scss'
+          'public/assets/css/style.css': 'public/assets/css/style.scss'
         }
-      },
+      }
     },
 
     uglify: {
@@ -53,8 +52,8 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'public/js/libs.min.js': [jsLibs],
-          'public/js/foundation.min.js': [jsFoundation]
+          'public/assets/js/min/libs.min.js': [jsLibs],
+          'public/assets/js/min/foundation.min.js': [jsFoundation]
         }
       }
     },
@@ -64,26 +63,30 @@ module.exports = function(grunt) {
         files: [
           jsLibs
         ],
-        tasks: ['jshint', 'uglify']
+        tasks: ['uglify']
+      },
+      images: {
+        files: 'public/assets/images/raw/*.*',
+        tasks: ['responsive_images']
       },
       scss: {
-        files: 'public/**/*.scss',
-        tasks: ['sass:style'],
-      },
-      css: {
-        files: 'public/css/*.css',
-        options: {
-          livereload: true
-        }
+        files: 'public/assets/**/*.scss',
+        tasks: ['sass:style']
       }
     },
 
     copy: {
       assets: {
         files: [
-          { expand: true, cwd: 'public/images/', src: ['*.*'], dest: 'sites/assets/fonts/'},
-          { expand: true, cwd: 'public/js',    src: ['*.*'], dest: 'site/js/'},
-          { expand: true, cwd: 'public/css',    src: ['*.*'], dest: 'site/css/'}
+          { expand: true, cwd: 'public/assets/fonts', src: ['*.*'], dest: 'www/assets/fonts/'},
+          { expand: true, cwd: 'public/assets/images', src: ['*.*'], dest: 'www/assets/images/'},
+          { expand: true, cwd: 'public/assets/min/js', src: ['*.*'], dest: 'www/assets/js/'},
+          { expand: true, cwd: 'public/assets/css', src: ['*.*'], dest: 'www/assets/css/'}
+        ]
+      },
+      js: {
+        files: [
+          { expand: true, cwd: 'public/assets/js/min', src: ['*.*'], dest: 'www/assets/js/min/'}
         ]
       },
       cleanurls: {
@@ -114,13 +117,13 @@ module.exports = function(grunt) {
       },
       production: {
           options: {
-              bucket: 'myharpbucket',
+              bucket: '<%= aws.AWSBucket %>'
           },
           files: [
               {dest: '/', cwd: 'www', action: 'delete',  differential: true},
               {action: "upload", expand: true, cwd: 'www', src: ['**'], dest: '/', differential: true}
           ]
-      },
+      }
     },
 
     cssmin: {
@@ -130,16 +133,17 @@ module.exports = function(grunt) {
       target: {
         files: [{
           expand: true,
-          cwd: 'www/css',
+          cwd: 'www/assets/css',
           src: ['*.css', '!*.min.css'],
-          dest: 'www/css',
+          dest: 'www/assets/css',
           ext: '.css'
         }]
       }
     },
 
     clean: {
-      images: ['www/images/raw/'],
+      images: ['www/assets/images/raw/','www/images'],
+      js: ['www/assets/js/'],
       html: ['www/**/*.html']
     },
 
@@ -148,37 +152,41 @@ module.exports = function(grunt) {
         folders: true,
         noJunk: true
       },
-      src: ['www/css/*'],
+      src: ['www/assets/css/*']
     },
 
     responsive_images: {
-      myTask: {
+      raw: {
         options: {
           sizes: [{
             width: 320,
+            name: "small"
           },{
-            width: 640,
+            name: "medium",
+            width: 640
           },{
-            width: 1024,
+            name: "large",
+            width: 1024
           }]
         },
         files: [{
           expand: true,
           src: ['**/*.{jpeg,jpg,gif,png}'],
-          cwd: 'public/images/raw/',
-          custom_dest: 'public/images/processed/{%= path %}/{%= width %}'
+          cwd: 'public/assets/images/raw/',
+          custom_dest: 'public/assets/images/processed/{%= path %}/{%= name %}-{%= width %}/'
         }]
       }
-    },
+    }
 
   });
 
   grunt.loadNpmTasks('grunt-dom-munger');
   grunt.loadNpmTasks('grunt-aws-s3');
   // Default task(s).
-  
-  grunt.registerTask('compile', ['dom_munger','cssmin','clean:images']);
-  grunt.registerTask('compilecleanurls', ['copy:cleanurls','cssmin','cleanempty','clean:html',]);
+
+  grunt.registerTask('compile', ['dom_munger','cssmin','clean:images','clean:js','cleanempty','copy:js']);
+  grunt.registerTask('compilecleanurls', ['copy:cleanurls','cssmin','cleanempty','clean:html']);
+  grunt.registerTask('images', ['responsive_images']);
   grunt.registerTask('default', ['dom_munger']);
   grunt.registerTask('deploy', ['aws_s3']);
 

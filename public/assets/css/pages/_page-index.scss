@@ -1,0 +1,175 @@
+body.page-index {
+  .bg-wrapper {
+    background-image: url("/assets/images/asanoha.png");
+    background-repeat: repeat;
+  }
+  .lead {
+    h1 {
+      color: #333;
+      font-size: 30px;
+      text-shadow: 0 0 0 #000;
+    }
+    p {
+      color: #333;
+    }
+  }
+  .hero {
+    background-image: url("/assets/images/processed/unsplash/large-1024/unsplash-jellyfish.jpg");
+    background-position: 180px;
+    @media #{$small-only} {
+      background-position: -180px;
+    }
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    h1 {
+      color: #FFF;
+      font-size: 40px;
+      margin-top: 100px;
+      text-shadow: 0 0 0 #000;
+    }
+    p {
+      color: #FFF;
+    }
+  }
+  .strip {
+    @include clearfix;
+    background-image: linear-gradient(left, #FFF, #FFF);
+    background: -webkit-linear-gradient(left, #FFF, #FFF);
+    background-position: -70px;
+    background-repeat: no-repeat;
+    z-index: 2;
+    position: relative;
+    padding-bottom: 20px;
+    @media #{$small-only} {
+      background-position: -20px;
+    }
+    .strip-inner {
+
+    }
+  }
+  .punchline {
+    background-color: $primary-color;
+    padding: 30px;
+    width: 80%;
+    height: 200px;
+    margin-top: 300px;
+    @media #{$small-only} {
+      width: calc(80% - 20px);
+      margin-top: 200px;
+
+    }
+    h4 {
+      margin: 0;
+      margin-bottom: 10px;
+      color: #FFF;
+      font-weight: 300;
+    }
+    h2 {
+      margin: 0;
+      color: #FFF;
+      font-size: 30px;
+      font-weight: 100;
+      line-height: 42px;
+      @media #{$small-only} {
+        margin: 0;
+        color: #FFF;
+        font-size: 28px;
+        font-weight: 200;
+        line-height: 36px;
+      }
+    }
+  }
+  .punchline-right {
+    background-color: $primary-color;
+    padding: 40px;
+    width: 200px;
+    height: 200px;
+    float: right;
+    margin-top: 100px;
+    h2 {
+      margin: 0;
+      color: #FFF;
+      font-size: 22px;
+      font-weight: 200;
+    }
+  }
+  .features {
+    .feature {
+      min-height: 300px;
+      @media #{$small-only} {
+        min-height: auto;
+        padding-right: 40px;
+        padding-bottom: 40px;
+      }
+      .line {
+        width: 80%;
+        border-top: 4px solid $primary-color;
+        margin-bottom: 15px;
+      }
+      p {
+        width: 80%;
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+  .human {
+    position: relative;
+    $highlight: #FFF;
+    background-color: $highlight;
+    background-image: url("/assets/images/processed/1024/person2.jpg");
+    background-position: top right;
+    background-size: contain;
+    @media #{$small-only} {
+      background-size: contain;
+      padding-top: 140px;
+    }
+    h4 {
+      display: inline-block;
+      margin-top: 30px;
+      font-weight: 300;
+      margin-bottom: 0;
+      background-color: $highlight;
+      @media #{$small-only} {
+        background-color: initial;
+      }
+    }
+    h3 {
+      display: inline-block;
+      margin-top: 5px;
+      background-color: $highlight;
+      @media #{$small-only} {
+        background-color: initial;
+      }
+    }
+    p {
+      display: inline-block;
+      padding: 2px 0;
+      @media #{$small-only} {
+        background-color: #FFF;
+        padding: 6px;
+      }
+      span {
+        background-color: $highlight;
+        display: inline;
+        padding: 0.45rem 0.45rem 0.45rem 0;
+        /* Needs prefixing */
+        -webkit-box-decoration-break: clone;
+      }
+    }
+    .caption {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      @media #{$small-only} {
+        top: 0;
+        right: 0;
+        width: 220px;
+        padding-right: 100px;
+      }
+    }
+  }
+}

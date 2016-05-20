@@ -1,0 +1,20 @@
+// ==========================================================================
+// Header
+// ==========================================================================
+$header-height: 60px;
+
+.header {
+  background-color: #FFF;
+  min-height: $header-height;
+  width: 100%;
+  border-bottom: 1px solid #CCC;
+}
+.header--fixed {
+  z-index: 50;
+  position: fixed;
+  top: 0;
+}
+
+body.body-header-fixed {
+  margin-top: $header-height;
+}

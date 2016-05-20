@@ -1,0 +1,31 @@
+body.page-docs-index {
+  height: calc(100%);
+  height: -webkit-calc(100% - 60px);
+  .bg-wrapper {
+    background-image: url("../../images/asanoha.png");
+    background-repeat: repeat;
+    height: calc(100%);
+    height: -webkit-calc(100%);
+  }
+  .content {
+    padding: 0;
+     height: calc(100%);
+    height: -webkit-calc(100%);
+  }
+  .strip {
+    padding: 30px 0 30px 0;
+    height: 100%;
+
+    @include clearfix;
+    background-image: linear-gradient(left, #FFF, #FFF);
+    background: -webkit-linear-gradient(left, #FFF, #FFF);
+    background-position: -70px;
+    background-repeat: no-repeat;
+    z-index: 2;
+    position: relative;
+    padding-bottom: 20px;
+    @media #{$small-only} {
+      // background-position: -20px;
+    }
+  }
+}

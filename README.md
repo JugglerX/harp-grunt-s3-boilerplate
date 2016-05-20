@@ -1,6 +1,7 @@
-## Harp Static Site Experiement
+# Harp Boilerplate
+This is a static site generator based on Harp JS http://harpjs.com/. It extends the core functionality of Harp by adding grunt post processing to harp compile.
 
-
+## Installation
 ### Install via git
 ```
 git clone https://github.com/JugglerX/harp.git
@@ -10,7 +11,7 @@ npm install
 ```
 **Server & Compile commands (with additional Grunt post processing)**
 - Instead of `harp server` run `npm run server` - This will launch the harp server and a browser sync server
-- Instead of `harp compile` run `npm run compile` - This will compile the harp website, perform grunt tasks and update all links to .html 
+- Instead of `harp compile` run `npm run compile` - This will compile the harp website, perform grunt tasks and update all links to .html
 - `grunt deploy` - Deploy to S3
 
 

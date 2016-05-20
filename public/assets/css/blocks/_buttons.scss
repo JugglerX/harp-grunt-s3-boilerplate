@@ -1,0 +1,132 @@
+// ==========================================================================
+// Buttons
+// ==========================================================================
+.button {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  font-weight: 400;
+  text-align: left;
+  padding: 5px 11px 7px 11px;
+  font-size: 14px;
+  margin-top: 18px;
+  background: $primary-color;
+  &:link, &:visited {
+    color: #FFF;
+  }
+  &:hover, &:focus {
+    background-color: darken($primary-color, 10%);
+    text-decoration: none;
+  }
+  // Theme
+  &.secondary {
+    background-color: $secondary-color;
+    &:link, &:visited {
+      color: #FFF;
+    }
+    &:hover, &:focus {
+      background-color: darken($secondary-color, 10%);
+      text-decoration: none;
+    }
+  }
+  &.cancel {
+    background-color: #6e706f;
+  }
+  // Sizes
+  &.full {
+    padding: 11px 15px 10px 15px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  &.small {
+    padding: 6px 11px 5px 11px;
+  }
+  &.medium {
+    padding: 11px 15px 10px 15px;
+  }
+  &.large {
+    padding: 16px 20px 15px 20px;
+  }
+  // Modifications
+  &.align-left {
+    text-align: left;
+  }
+  &.center, &.align-center {
+    text-align: center;
+  }
+  // Icons
+  &.button-back, &.back {
+    padding-left: 34px;
+    &:after {
+      position: absolute;
+      content: "\f104";
+      width: 14px;
+      top: 0.65rem;
+      left: 0.9rem;
+      color: #FFF;
+      display: inline-block;
+      font-family: $font-awesome;
+      vertical-align: middle;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+  &.arrow {
+    padding-right: 34px;
+    &:after {
+      position: absolute;
+      content: "\f105";
+      width: 14px;
+      top: 0.65rem;
+      right: 0.5rem;
+      color: white;
+      display: inline-block;
+      font-family: $font-awesome;
+      vertical-align: middle;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+  &.button-external, &.external {
+    padding-right: 40px;
+    &:after {
+      position: absolute;
+      content: "\f08e";
+      width: 14px;
+      top: 0.65rem;
+      right: 0.8rem;
+      color: white;
+      display: inline-block;
+      font-family: $font-awesome;
+      vertical-align: middle;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &.button-right, &.right {
+    float: right;
+  }
+  &.button-left, &.left {
+    float: left;
+  }
+  &.full-on-mobile {
+    @media #{$small-only} {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  &.no-margin {
+    margin: 0;
+  }
+  &.no-bottom-margin, &.no-margin-bottom {
+    margin-bottom: 0;
+  }
+  // font-awesome padding
+  .fa {
+    margin-left: 8px;
+  }
+}

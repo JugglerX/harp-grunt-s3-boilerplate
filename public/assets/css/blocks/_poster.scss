@@ -1,0 +1,55 @@
+// ==========================================================================
+// Poster
+// ==========================================================================
+$azure: #00f0ff;
+
+.posters {
+}
+
+.poster {
+  padding-top: rem-calc(15);
+  padding-bottom: rem-calc(15);
+  .poster-inner {
+    position: relative;
+  }
+  .poster-overlay {
+    position: absolute;
+    padding: 10px 10px 10px 20px;
+    background: rgba(0,0,0,1);
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+    vertical-align: bottom;
+    min-height: 92px;
+    h3, h3.poster-title {
+      color: #FFF;
+      font-size: rem-calc(16);
+      line-height: rem-calc(16);
+      margin: 0;
+      display: inline-block;
+      vertical-align: bottom;
+      a {
+        color: $azure;
+      }
+    }
+    p {
+      color: #999 !important;
+      margin: 10px 0 0 0;
+      display: block;
+      font-size: rem-calc(14);
+      line-height: rem-calc(16);
+    }
+    .poster-icon {
+      display: inline-block;
+      margin-left: 10px;
+      vertical-align: bottom;
+    }
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+

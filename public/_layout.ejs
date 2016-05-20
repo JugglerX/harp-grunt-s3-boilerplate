@@ -1,36 +1,30 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Harp Test</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600" rel="stylesheet" type="text/css" />
-		<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-		<script src="<%- baseurl %>js/prism.js"></script>
-		<script src="<%- baseurl %>js/push-menu.js"></script>
-		<link href="<%- baseurl %>css/style.css" type="text/css" rel="stylesheet" >
-	</head>
-
-	<% var className = (current.source == 'index') ? "homepage" : "page-" + current.source; %>
-	<body class="body__header--fixed <%- className %>">
-		<%- partial("_partials/header") %>
-		<%- partial("_partials/push-menu") %>
-		<div class="content">
-			<div class="row">
-				<div class="columns small-12">
-					<%- yield %>
-				</div>
-			</div>
-		</div>
-		<%- partial("_partials/footer") %>
-
-		<!-- Foundation Scripts -->
-		<script src="<%- baseurl %>js/foundation/foundation.js"></script>
-		<script src="<%- baseurl %>js/foundation/foundation.tooltip.js"></script>
-		<script src="<%- baseurl %>js/foundation/foundation.reveal.js"></script>
-		<script src="<%- baseurl %>js/foundation/foundation.equalizer.js"></script>
-		<script src="<%- baseurl %>js/foundation-init.js"></script>
-	</body>
+<head>
+    <title>Harp Boilerplate</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600" rel="stylesheet" type="text/css"/>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="<%- baseurl %>assets/js/min/libs.min.js"></script>
+    <link href="<%- baseurl %>assets/css/style.css" type="text/css" rel="stylesheet">
+</head>
+<% var pageClassName = "page-" + current.path.join("-"); %>
+<% var sectionClassName = "section-" + current.path[0]; %>
+<body class="body-fullwidth body-header-fixed <%- sectionClassName %> <%- pageClassName %>">
+<%- partial("_partials/header") %>
+<%- partial("_partials/push-menu") %>
+<div class="content">
+    <div class="row">
+        <div class="colum small-12">
+            <%- yield %>
+        </div>
+    </div>
+</div>
+<%- partial("_partials/footer") %>
+<!-- Foundation Scripts -->
+<script src="<%- baseurl %>assets/js/min/foundation.min.js"></script>
+</body>
 </html>

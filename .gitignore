@@ -1,9 +1,10 @@
 *.DS_store
 *.sass-cache/
-public/fonts/
-www/fonts/
+public/assets/fonts
+public/assets/images/processed
 www
 node_modules
 config.codekit
 aws-keys.json
 .idea
+

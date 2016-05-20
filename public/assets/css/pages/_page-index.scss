@@ -1,24 +1,6 @@
 body.page-index {
-  .bg-wrapper {
-    background-image: url("/assets/images/asanoha.png");
-    background-repeat: repeat;
-  }
-  .lead {
-    h1 {
-      color: #333;
-      font-size: 30px;
-      text-shadow: 0 0 0 #000;
-    }
-    p {
-      color: #333;
-    }
-  }
   .hero {
-    background-image: url("/assets/images/processed/unsplash/large-1024/unsplash-jellyfish.jpg");
-    background-position: 180px;
-    @media #{$small-only} {
-      background-position: -180px;
-    }
+    background-image: url("/assets/images/processed/unsplash/large-1024/6.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;

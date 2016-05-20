@@ -66,7 +66,7 @@ module.exports = function(grunt) {
         tasks: ['uglify']
       },
       images: {
-        files: 'public/assets/images/raw/*.*',
+        files: ['public/assets/images/raw/*.*','public/assets/images/raw/**/*.*'],
         tasks: ['responsive_images']
       },
       scss: {

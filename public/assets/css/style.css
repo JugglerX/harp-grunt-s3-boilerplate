@@ -2385,50 +2385,11 @@ th.hide-for-touch {
   float: left;
 }
 
-/* line 37, /Applications/MAMP/htdocs/harp/public/assets/css/blocks/_logo.scss */
+/* line 36, /Applications/MAMP/htdocs/harp/public/assets/css/blocks/_logo.scss */
 .logo__text a {
   line-height: 36px;
   font-size: 22px;
-  font-weight: 700;
-  font-family: "Open Sans", "helvetica", "arial";
-  text-decoration: none;
-  color: #333;
-  text-transform: uppercase;
-}
-
-/* line 47, /Applications/MAMP/htdocs/harp/public/assets/css/blocks/_logo.scss */
-.logo__fusion {
-  margin: 10px 0 10px 0;
-  float: left;
-}
-
-/* line 51, /Applications/MAMP/htdocs/harp/public/assets/css/blocks/_logo.scss */
-.logo__fusion img {
-  width: 26px;
-  float: left;
-}
-
-/* line 55, /Applications/MAMP/htdocs/harp/public/assets/css/blocks/_logo.scss */
-.logo__fusion span {
-  font-size: 20px;
-  color: #333;
-  letter-spacing: .4px;
-  line-height: 40px;
-  padding-left: 10px;
-  margin-left: 8px;
-  font-weight: 600;
-  text-transform: uppercase;
-  border-left: 1px solid grey;
-  font-family: "Open Sans", "helvetica", "arial";
-  height: 40px;
-  display: inline-block;
-}
-
-/* line 69, /Applications/MAMP/htdocs/harp/public/assets/css/blocks/_logo.scss */
-.logo__fusion a {
-  line-height: 36px;
-  font-size: 22px;
-  font-weight: 700;
+  font-weight: 400;
   font-family: "Open Sans", "helvetica", "arial";
   text-decoration: none;
   color: #333;
@@ -4311,41 +4272,15 @@ body.section-docs .artifakt {
 }
 
 /* line 2, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
-body.page-index .bg-wrapper {
-  background-image: url("/assets/images/asanoha.png");
-  background-repeat: repeat;
-}
-
-/* line 7, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
-body.page-index .lead h1 {
-  color: #333;
-  font-size: 30px;
-  text-shadow: 0 0 0 #000;
-}
-
-/* line 12, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
-body.page-index .lead p {
-  color: #333;
-}
-
-/* line 16, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .hero {
-  background-image: url("/assets/images/processed/unsplash/large-1024/unsplash-jellyfish.jpg");
-  background-position: 180px;
+  background-image: url("/assets/images/processed/unsplash/large-1024/6.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   z-index: 1;
 }
 
-@media only screen and (max-width: 767px) {
-  /* line 16, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
-  body.page-index .hero {
-    background-position: -180px;
-  }
-}
-
-/* line 26, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+/* line 8, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .hero h1 {
   color: #FFF;
   font-size: 40px;
@@ -4353,12 +4288,12 @@ body.page-index .hero h1 {
   text-shadow: 0 0 0 #000;
 }
 
-/* line 32, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+/* line 14, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .hero p {
   color: #FFF;
 }
 
-/* line 36, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+/* line 18, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .strip {
   background-image: linear-gradient(left, #FFF, #FFF);
   background: -webkit-linear-gradient(left, #FFF, #FFF);
@@ -4381,13 +4316,13 @@ body.page-index .strip:after {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 36, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+  /* line 18, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
   body.page-index .strip {
     background-position: -20px;
   }
 }
 
-/* line 52, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+/* line 34, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .punchline {
   background-color: #86BB40;
   padding: 30px;
@@ -4397,14 +4332,14 @@ body.page-index .punchline {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 52, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+  /* line 34, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
   body.page-index .punchline {
     width: calc(80% - 20px);
     margin-top: 200px;
   }
 }
 
-/* line 63, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+/* line 45, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .punchline h4 {
   margin: 0;
   margin-bottom: 10px;
@@ -4412,7 +4347,7 @@ body.page-index .punchline h4 {
   font-weight: 300;
 }
 
-/* line 69, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+/* line 51, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .punchline h2 {
   margin: 0;
   color: #FFF;
@@ -4422,7 +4357,7 @@ body.page-index .punchline h2 {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 69, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+  /* line 51, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
   body.page-index .punchline h2 {
     margin: 0;
     color: #FFF;
@@ -4432,7 +4367,7 @@ body.page-index .punchline h2 {
   }
 }
 
-/* line 84, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+/* line 66, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .punchline-right {
   background-color: #86BB40;
   padding: 40px;
@@ -4442,7 +4377,7 @@ body.page-index .punchline-right {
   margin-top: 100px;
 }
 
-/* line 91, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+/* line 73, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .punchline-right h2 {
   margin: 0;
   color: #FFF;
@@ -4450,13 +4385,13 @@ body.page-index .punchline-right h2 {
   font-weight: 200;
 }
 
-/* line 99, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+/* line 81, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .features .feature {
   min-height: 300px;
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 99, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+  /* line 81, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
   body.page-index .features .feature {
     min-height: auto;
     padding-right: 40px;
@@ -4464,24 +4399,24 @@ body.page-index .features .feature {
   }
 }
 
-/* line 106, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+/* line 88, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .features .feature .line {
   width: 80%;
   border-top: 4px solid #86BB40;
   margin-bottom: 15px;
 }
 
-/* line 111, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+/* line 93, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .features .feature p {
   width: 80%;
 }
 
-/* line 114, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+/* line 96, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .features .feature a {
   text-decoration: none;
 }
 
-/* line 119, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+/* line 101, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .human {
   position: relative;
   background-color: #FFF;
@@ -4491,14 +4426,14 @@ body.page-index .human {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 119, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+  /* line 101, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
   body.page-index .human {
     background-size: contain;
     padding-top: 140px;
   }
 }
 
-/* line 130, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+/* line 112, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .human h4 {
   display: inline-block;
   margin-top: 30px;
@@ -4508,13 +4443,13 @@ body.page-index .human h4 {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 130, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+  /* line 112, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
   body.page-index .human h4 {
     background-color: initial;
   }
 }
 
-/* line 140, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+/* line 122, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .human h3 {
   display: inline-block;
   margin-top: 5px;
@@ -4522,27 +4457,27 @@ body.page-index .human h3 {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 140, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+  /* line 122, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
   body.page-index .human h3 {
     background-color: initial;
   }
 }
 
-/* line 148, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+/* line 130, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .human p {
   display: inline-block;
   padding: 2px 0;
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 148, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+  /* line 130, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
   body.page-index .human p {
     background-color: #FFF;
     padding: 6px;
   }
 }
 
-/* line 155, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+/* line 137, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .human p span {
   background-color: #FFF;
   display: inline;
@@ -4551,7 +4486,7 @@ body.page-index .human p span {
   -webkit-box-decoration-break: clone;
 }
 
-/* line 163, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+/* line 145, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .human .caption {
   position: absolute;
   bottom: 0;
@@ -4559,7 +4494,7 @@ body.page-index .human .caption {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 163, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
+  /* line 145, /Applications/MAMP/htdocs/harp/public/assets/css/pages/_page-index.scss */
   body.page-index .human .caption {
     top: 0;
     right: 0;

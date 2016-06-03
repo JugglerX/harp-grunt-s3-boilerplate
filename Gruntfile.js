@@ -162,8 +162,8 @@ module.exports = function(grunt) {
             width: 320,
             name: "small"
           },{
+            width: 640,
             name: "medium",
-            width: 640
           },{
             name: "large",
             width: 1024
@@ -173,7 +173,7 @@ module.exports = function(grunt) {
           expand: true,
           src: ['**/*.{jpeg,jpg,gif,png}'],
           cwd: 'public/assets/images/raw/',
-          custom_dest: 'public/assets/images/processed/{%= path %}/{%= name %}-{%= width %}/'
+          custom_dest: 'public/assets/images/processed/{%= path %}/{%= name %}/'
         }]
       }
     }

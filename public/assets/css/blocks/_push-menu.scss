@@ -6,11 +6,10 @@
 .pushmenu__toggle {
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: 2000;
   background: $primary-color;
   outline: none;
-  // padding-left: 60px;
 }
 
 // Push Menu

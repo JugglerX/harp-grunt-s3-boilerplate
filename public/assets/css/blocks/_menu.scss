@@ -2,12 +2,13 @@
 // Menu
 // ==========================================================================
 ul.menu {
-    padding: 10px 0 10px 0;
+    padding: 18px 0 18px 0;
     margin: 0;
     margin-right: 80px;
     font-family: $base-font;
     line-height: 30px;
     font-size: 14px;
+    line-height: 22px;
     font-weight: 600;
     vertical-align: middle;
     border-bottom: none;
@@ -20,6 +21,7 @@ ul.menu {
         font-family: $base-font;
         margin: 0;
         padding: 0;
+
         &:first-child a{
             padding-left: 0;
         }

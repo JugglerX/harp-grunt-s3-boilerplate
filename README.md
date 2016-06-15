@@ -28,3 +28,9 @@ harp init --boilerplate JugglerX/harp/
 ```
 npm install
 ```
+
+Starting point for creating static websites with Gulp, BrowserSync, and Handlebars.
+https://github.com/jadnco/static-boilerplate
+
+gulp + expressjs + nodemon + browser-sync
+https://gist.github.com/sogko/b53d33d4f3b40d3b4b2e

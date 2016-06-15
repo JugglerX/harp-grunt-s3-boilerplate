@@ -8,4 +8,5 @@ node_modules
 config.codekit
 aws-keys.json
 .idea
-
+bower_components
+dist

@@ -3,6 +3,7 @@
 public/assets/fonts
 public/assets/images/processed
 www
+build
 node_modules
 config.codekit
 aws-keys.json

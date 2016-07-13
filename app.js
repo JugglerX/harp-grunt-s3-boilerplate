@@ -12,8 +12,8 @@ var app = express();
 
 // view engine setup
 app.set('views', __dirname + '/src/views/pages/');
-app.engine('.hbs', exphbs({extname: '.hbs', defaultLayout: 'default',layoutsDir: "src/views/layouts/",partialsDir: "src/views/partials/"}));
-app.set('view engine', '.hbs');
+app.engine('.html', exphbs({extname: '.html', defaultLayout: 'default',layoutsDir: "src/views/layouts/",partialsDir: "src/views/partials/"}));
+app.set('view engine', '.html');
 
 
 

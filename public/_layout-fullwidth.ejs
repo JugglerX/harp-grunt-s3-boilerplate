@@ -15,12 +15,10 @@
 <% var sectionClassName = "section-" + current.path[0]; %>
 <body class="body-fullwidth body-header-fixed <%- sectionClassName %> <%- pageClassName %>">
 <%- partial("_partials/header") %>
-<%- partial("_partials/push-menu") %>
 <div class="content">
     <%- yield %>
 </div>
 <%- partial("_partials/footer") %>
-<!-- Foundation Scripts -->
 <script src="<%- baseurl %>assets/js/min/foundation.min.js"></script>
 </body>
 </html>

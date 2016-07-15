@@ -3047,13 +3047,6 @@ a:hover {
   color: #d3000a;
 }
 
-/* line 25, /Users/rob/Projects/harp/public/assets/css/blocks/_type.scss */
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 /* line 30, /Users/rob/Projects/harp/public/assets/css/blocks/_type.scss */
 h1 {
   font-family: "Open Sans", "helvetica", "arial";
@@ -4197,6 +4190,7 @@ body.modal-open {
   position: relative;
   color: #fff;
   overflow: hidden;
+  background-image: url("../../images/wave.gif");
 }
 
 /* line 1, /Users/rob/Projects/harp/public/assets/css/blocks/_caption.scss */
@@ -4273,14 +4267,15 @@ body.section-docs .artifakt {
 
 /* line 2, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .hero {
-  background-image: url("/assets/images/processed/unsplash/large-1024/6.jpg");
+  height: 200px;
+  background-image: url("/assets/images/wave.gif");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   z-index: 1;
 }
 
-/* line 8, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+/* line 9, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .hero h1 {
   color: #FFF;
   font-size: 40px;
@@ -4288,12 +4283,12 @@ body.page-index .hero h1 {
   text-shadow: 0 0 0 #000;
 }
 
-/* line 14, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+/* line 15, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .hero p {
   color: #FFF;
 }
 
-/* line 18, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+/* line 19, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .strip {
   background-image: linear-gradient(left, #FFF, #FFF);
   background: -webkit-linear-gradient(left, #FFF, #FFF);
@@ -4316,13 +4311,13 @@ body.page-index .strip:after {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 18, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+  /* line 19, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
   body.page-index .strip {
     background-position: -20px;
   }
 }
 
-/* line 34, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+/* line 35, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .punchline {
   background-color: #FF3A43;
   padding: 30px;
@@ -4332,14 +4327,14 @@ body.page-index .punchline {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 34, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+  /* line 35, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
   body.page-index .punchline {
     width: calc(80% - 20px);
     margin-top: 200px;
   }
 }
 
-/* line 45, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+/* line 46, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .punchline h4 {
   margin: 0;
   margin-bottom: 10px;
@@ -4347,7 +4342,7 @@ body.page-index .punchline h4 {
   font-weight: 300;
 }
 
-/* line 51, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+/* line 52, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .punchline h2 {
   margin: 0;
   color: #FFF;
@@ -4357,7 +4352,7 @@ body.page-index .punchline h2 {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 51, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+  /* line 52, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
   body.page-index .punchline h2 {
     margin: 0;
     color: #FFF;
@@ -4367,7 +4362,7 @@ body.page-index .punchline h2 {
   }
 }
 
-/* line 66, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+/* line 67, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .punchline-right {
   background-color: #FF3A43;
   padding: 40px;
@@ -4377,7 +4372,7 @@ body.page-index .punchline-right {
   margin-top: 100px;
 }
 
-/* line 73, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+/* line 74, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .punchline-right h2 {
   margin: 0;
   color: #FFF;
@@ -4385,13 +4380,13 @@ body.page-index .punchline-right h2 {
   font-weight: 200;
 }
 
-/* line 81, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+/* line 82, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .features .feature {
   min-height: 300px;
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 81, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+  /* line 82, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
   body.page-index .features .feature {
     min-height: auto;
     padding-right: 40px;
@@ -4399,24 +4394,24 @@ body.page-index .features .feature {
   }
 }
 
-/* line 88, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+/* line 89, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .features .feature .line {
   width: 80%;
   border-top: 4px solid #FF3A43;
   margin-bottom: 15px;
 }
 
-/* line 93, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+/* line 94, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .features .feature p {
   width: 80%;
 }
 
-/* line 96, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+/* line 97, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .features .feature a {
   text-decoration: none;
 }
 
-/* line 101, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+/* line 102, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .human {
   position: relative;
   background-color: #FFF;
@@ -4426,14 +4421,14 @@ body.page-index .human {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 101, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+  /* line 102, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
   body.page-index .human {
     background-size: contain;
     padding-top: 140px;
   }
 }
 
-/* line 112, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+/* line 113, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .human h4 {
   display: inline-block;
   margin-top: 30px;
@@ -4443,13 +4438,13 @@ body.page-index .human h4 {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 112, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+  /* line 113, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
   body.page-index .human h4 {
     background-color: initial;
   }
 }
 
-/* line 122, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+/* line 123, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .human h3 {
   display: inline-block;
   margin-top: 5px;
@@ -4457,27 +4452,27 @@ body.page-index .human h3 {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 122, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+  /* line 123, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
   body.page-index .human h3 {
     background-color: initial;
   }
 }
 
-/* line 130, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+/* line 131, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .human p {
   display: inline-block;
   padding: 2px 0;
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 130, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+  /* line 131, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
   body.page-index .human p {
     background-color: #FFF;
     padding: 6px;
   }
 }
 
-/* line 137, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+/* line 138, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .human p span {
   background-color: #FFF;
   display: inline;
@@ -4486,7 +4481,7 @@ body.page-index .human p span {
   -webkit-box-decoration-break: clone;
 }
 
-/* line 145, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+/* line 146, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
 body.page-index .human .caption {
   position: absolute;
   bottom: 0;
@@ -4494,7 +4489,7 @@ body.page-index .human .caption {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 145, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
+  /* line 146, /Users/rob/Projects/harp/public/assets/css/pages/_page-index.scss */
   body.page-index .human .caption {
     top: 0;
     right: 0;

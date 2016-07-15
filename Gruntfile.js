@@ -20,6 +20,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     aws: grunt.file.readJSON('aws-keys.json'),
 
+    // adds a .html extension to all <a> tags
     dom_munger: {
       htmllinks: {
         options: {
@@ -153,29 +154,6 @@ module.exports = function(grunt) {
         noJunk: true
       },
       src: ['www/assets/css/*']
-    },
-
-    responsive_images: {
-      raw: {
-        options: {
-          sizes: [{
-            width: 320,
-            name: "small"
-          },{
-            width: 640,
-            name: "medium",
-          },{
-            name: "large",
-            width: 1024
-          }]
-        },
-        files: [{
-          expand: true,
-          src: ['**/*.{jpeg,jpg,gif,png}'],
-          cwd: 'public/assets/images/raw/',
-          custom_dest: 'public/assets/images/processed/{%= path %}/{%= name %}/'
-        }]
-      }
     }
 
   });
@@ -184,9 +162,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-aws-s3');
   // Default task(s).
 
-  grunt.registerTask('compile', ['dom_munger','cssmin','clean:images','clean:js','cleanempty','copy:js']);
+  grunt.registerTask('compile', ['dom_munger','cssmin','clean:js','cleanempty','copy:js']);
   grunt.registerTask('compilecleanurls', ['copy:cleanurls','cssmin','cleanempty','clean:html']);
-  grunt.registerTask('images', ['responsive_images']);
   grunt.registerTask('default', ['dom_munger']);
   grunt.registerTask('deploy', ['aws_s3']);
 

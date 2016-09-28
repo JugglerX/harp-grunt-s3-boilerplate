@@ -1,18 +1,36 @@
-# Harp Boilerplate
-This is a static site generator based on Harp JS http://harpjs.com/. It extends the core functionality of Harp by adding grunt post processing to harp compile.
+# Harp + Grunt + AWS S3 Boilerplate
+This is a static site generator based on Harp JS http://harpjs.com/. It extends the core functionality of Harp by adding grunt post processing and AWS S3 deployment.
 
 ## Installation
 ### Install via git
+
+Download or clone this repo.
+
 ```
-git clone https://github.com/JugglerX/harp.git
+npm install -g harp
 ```
 ```
 npm install
 ```
 **Server & Compile commands (with additional Grunt post processing)**
 - Instead of `harp server` run `npm run server` - This will launch the harp server and a browser sync server
-- Instead of `harp compile` run `npm run compile` - This will compile the harp website, perform grunt tasks and update all links to .html
+- Instead of `harp compile` run `npm run compile` - This will compile the harp website, perform grunt tasks and updates all <a> tags with a .html extension. Copies files from the `public` folder to `www` folder.
 - `grunt deploy` - Deploy to S3
+
+### AWS S3 Setup ###
+Create a file in the project root (same level as package.json) called aws-keys.json. Update the AccessKeyId, SecretKey, Region & Bucket with your own values from your AWS console.
+
+```
+// aws-keys.json
+{
+  "AWSAccessKeyId": "XXXXXXXXXXXXXXXXXX",
+  "AWSSecretKey": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "AWSRegion":  "us-west-2",
+  "AWSBucket":  "mybucket"
+}
+```
+
+When you run `grunt deploy` it will now read your AWS settings from this file. The contents of the `www` folder are deployed to the root of the S3 bucket. A diff will be performed on the files and only modified files are uploaded to S3.
 
 
 ### Install as a Harp Boilerplate

@@ -4,7 +4,7 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
 
   var jsLibs = [
-    "public/assets/js/vendor/jquery-1.12.4.js", 
+    // "public/assets/js/vendor/jquery-1.12.4.js", 
     "public/assets/js/foundation/foundation.js",
     // "public/assets/js/foundation/foundation.tooltip.js",
     // "public/assets/js/foundation/foundation.reveal.js",
@@ -159,6 +159,8 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-dom-munger');
   grunt.loadNpmTasks('grunt-aws-s3');
+
+  // var target = grunt.option('target') || dev;
 
   grunt.registerTask('compile', ['dom_munger','cssmin','clean:js','cleanempty','uglify:prod']);
   grunt.registerTask('compilecleanurls', ['copy:cleanurls','cssmin','cleanempty','clean:html']);

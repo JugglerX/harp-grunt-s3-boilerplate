@@ -12,7 +12,7 @@ $rem-base: 16px !default;
   }
   @return nth($range, 1);
 }
-
+  
 @function upper-bound($range) {
   @if length($range) < 2 {
     @return 999999999999;

@@ -2,18 +2,18 @@
 @import "foundation/functions";
 @import "settings";
 @import "reset";
-@import "breakpoints";
-@import "mixins";
-
-// Foundation
-@import "foundation/components/grid";
+@import "breakpoints"; 
+@import "mixins";   
+ 
+// Foundation 
+@import "foundation/components/grid"; 
 @import "foundation/components/global";
-@import "foundation/components/reveal";
-@import "foundation/components/visibility";
-@import "foundation/components/tooltips";
+// @import "foundation/components/reveal";
+// @import "foundation/components/visibility";
+// @import "foundation/components/tooltips";
 
 // Blocks
-@import "blocks/logo";
+@import "blocks/logo"; 
 //@import "blocks/fonts";
 @import "blocks/menu";
 @import "blocks/buttons";
@@ -47,12 +47,12 @@
 
 
 // Vendor
-@import "vendor/hamburgers";
-@import "vendor/prism";
+// @import "vendor/hamburgers";
+// @import "vendor/prism";
 
 // Font
-@import url(http://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,700|Roboto:400,700);
-@import "fontawesome/font-awesome";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+// @import "fontawesome/font-awesome";
 
 body {
    // @include display-breakpoint;

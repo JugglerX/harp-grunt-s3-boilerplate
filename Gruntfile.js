@@ -1,18 +1,16 @@
 module.exports = function(grunt) {
 
   require('load-grunt-tasks')(grunt);
-  //require('time-grunt')(grunt);
+  require('time-grunt')(grunt);
 
   var jsLibs = [
-    "public/assets/js/prism.js",
-    "public/assets/js/push-menu.js"
-  ];
-  var jsFoundation = [
+    // "public/assets/js/vendor/jquery-1.12.4.js", 
     "public/assets/js/foundation/foundation.js",
-    "public/assets/js/foundation/foundation.tooltip.js",
-    "public/assets/js/foundation/foundation.reveal.js",
-    "public/assets/js/foundation/foundation.equalizer.js",
-    "public/assets/js/foundation-init.js"
+    // "public/assets/js/foundation/foundation.tooltip.js",
+    // "public/assets/js/foundation/foundation.reveal.js",
+    // "public/assets/js/foundation/foundation.equalizer.js",
+    "public/assets/js/scripts/foundation-init.js",
+    "public/assets/js/scripts/push-menu.js",
   ];
 
   // Project configuration.
@@ -20,6 +18,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     aws: grunt.file.readJSON('aws-keys.json'),
 
+    // adds a .html extension to all <a> tags
     dom_munger: {
       htmllinks: {
         options: {
@@ -33,27 +32,38 @@ module.exports = function(grunt) {
       options: {
         outputStyle: 'expanded',
         sourceComments: true,
-        sourceMap: false
+        sourceMap: false // cant get them to work
       },
       style: {
         files: {
           'public/assets/css/style.css': 'public/assets/css/style.scss'
         }
       }
-    },
+    }, 
 
     uglify: {
-      options: {
-        sourceMap: false,
-        compress: false,
-        beautify: false,
-        preserveComments: 'false',
-        mangle: false
-      },
-      dist: {
+      dev: {
+        options: {
+          sourceMap: true,
+          compress: true,
+          beautify: false,
+          preserveComments: false,
+          mangle: false
+        },
         files: {
-          'public/assets/js/min/libs.min.js': [jsLibs],
-          'public/assets/js/min/foundation.min.js': [jsFoundation]
+          'public/assets/js/libs.min.js': [jsLibs]
+        }
+      },
+      prod: {
+        options: {
+          sourceMap: false,
+          compress: true,
+          beautify: false,
+          preserveComments: false,
+          mangle: false
+        },
+        files: {
+          'www/assets/js/libs.min.js': [jsLibs]
         }
       }
     },
@@ -61,13 +71,10 @@ module.exports = function(grunt) {
     watch: {
       js: {
         files: [
-          jsLibs
+          jsLibs,
+          'Gruntfile.js' 
         ],
-        tasks: ['uglify']
-      },
-      images: {
-        files: ['public/assets/images/raw/*.*','public/assets/images/raw/**/*.*'],
-        tasks: ['responsive_images']
+        tasks: ['uglify:dev']
       },
       scss: {
         files: 'public/assets/**/*.scss',
@@ -80,13 +87,7 @@ module.exports = function(grunt) {
         files: [
           { expand: true, cwd: 'public/assets/fonts', src: ['*.*'], dest: 'www/assets/fonts/'},
           { expand: true, cwd: 'public/assets/images', src: ['*.*'], dest: 'www/assets/images/'},
-          { expand: true, cwd: 'public/assets/min/js', src: ['*.*'], dest: 'www/assets/js/'},
           { expand: true, cwd: 'public/assets/css', src: ['*.*'], dest: 'www/assets/css/'}
-        ]
-      },
-      js: {
-        files: [
-          { expand: true, cwd: 'public/assets/js/min', src: ['*.*'], dest: 'www/assets/js/min/'}
         ]
       },
       cleanurls: {
@@ -142,7 +143,6 @@ module.exports = function(grunt) {
     },
 
     clean: {
-      images: ['www/assets/images/raw/','www/images'],
       js: ['www/assets/js/'],
       html: ['www/**/*.html']
     },
@@ -153,41 +153,17 @@ module.exports = function(grunt) {
         noJunk: true
       },
       src: ['www/assets/css/*']
-    },
-
-    responsive_images: {
-      raw: {
-        options: {
-          sizes: [{
-            width: 320,
-            name: "small"
-          },{
-            width: 640,
-            name: "medium",
-          },{
-            name: "large",
-            width: 1024
-          }]
-        },
-        files: [{
-          expand: true,
-          src: ['**/*.{jpeg,jpg,gif,png}'],
-          cwd: 'public/assets/images/raw/',
-          custom_dest: 'public/assets/images/processed/{%= path %}/{%= name %}/'
-        }]
-      }
     }
 
   });
 
   grunt.loadNpmTasks('grunt-dom-munger');
   grunt.loadNpmTasks('grunt-aws-s3');
-  // Default task(s).
 
-  grunt.registerTask('compile', ['dom_munger','cssmin','clean:images','clean:js','cleanempty','copy:js']);
+  // var target = grunt.option('target') || dev;
+
+  grunt.registerTask('compile', ['dom_munger','cssmin','clean:js','cleanempty','uglify:prod']);
   grunt.registerTask('compilecleanurls', ['copy:cleanurls','cssmin','cleanempty','clean:html']);
-  grunt.registerTask('images', ['responsive_images']);
-  grunt.registerTask('default', ['dom_munger']);
   grunt.registerTask('deploy', ['aws_s3']);
 
 };

@@ -1,79 +1,32 @@
 <h1>Cards</h1>
-<h4 class="docs__html">HTML</h4>
-
-<h1><%= title %></h1>
+<h3>Card Titles</h3>
 <% public.docs.cards._data.cards.results.forEach(function(card) { %>
     <li><%= card.title %></li>
 <% }); %>
 
 <div class="row cards">
-
-    <div class="cards__header small-12 column">
-        <h2 class="cards__title">Cards<span class="cards__count"> (<a href="#">8</a>)</span></h2>
-    </div>
-    <% results.forEach(function(card, index) { %>
-
-        <div class="card small-12 small-medium-4 medium-3 large-3 columns end">
-            <div class="card__inner">
-                <div class="card__header">
-                    <h3><a href="<%= card.link %>"><%= card.title %></a></h3>
-                </div>
-                <div class="card__date">
-                    <h5><%= card.date %></h5>
-                </div>
-                <div class="card__body">
-                    <%= card.body %>
-                </div>
-                <div class="card__image">
-               
-                    <img src="/assets/images/processed/unsplash/medium/<%= public.assets.images.processed.unsplash.medium._contents[index] %>">
-                </div>
-                <div class="card__category">
-                    <% card.category.forEach(function(category) { %>
-                        <%= category %>
-                    <% }); %>
-                </div>
+<h3>Card Loop</h3>
+<% results.forEach(function(card, index) { %>
+    <div class="card small-12 small-medium-4 medium-3 large-3 columns end">
+        <div class="card__inner">
+            <div class="card__header">
+                <h3><a href="<%= card.link %>"><%= card.title %></a></h3>
+            </div>
+            <div class="card__date">
+                <h5><%= card.date %></h5>
+            </div>
+            <div class="card__body">
+                <%= card.body %>
+            </div>
+            <div class="card__image">
+                <img src="/assets/images/unsplash/<%= public.assets.images.unsplash._contents[index] %>">
+            </div>
+            <div class="card__category">
+                <% card.category.forEach(function(category) { %>
+                    <%= category %>
+                <% }); %>
             </div>
         </div>
-
-    <% }); %>
-
-    <div class="cards__footer small-12 column">
-        <a href="#">See all cards</a>
     </div>
-
+<% }); %>
 </div>
-
-<h4 class="docs__html">RENDERED HTML</h4>
-<pre><code class="language-html">&lt;div class="row cards" id="articles">
-    &lt;div class="cards-header small-12 column">
-        &lt;h2 class="title">Articles&lt;span> (&lt;a href="/profile/H0IVG0XZC26PJ/articles">8&lt;/a>)&lt;/span>&lt;/h2>
-    &lt;/div>
-
-    &lt;div class="card card-simplecontent small-12 small-medium-4 medium-3 large-3 columns end">
-        &lt;div class="card-inner">
-            &lt;div class="header">
-                &lt;h3>&lt;a href="https://knowledge-local.autodesk.com/support/3ds-max/getting-started/caas/simplecontent/content/kimaya-1.html">kimaya-1&lt;/a>&lt;/h3>
-            &lt;/div>
-            &lt;div class="dateline">
-                &lt;h5>Mar 25 2016&lt;/h5>
-            &lt;/div>
-            &lt;div class="copy-small">
-                &lt;p>n scfm nxcmxdsvdsgfdsgdsffgsd...&lt;/p>
-            &lt;/div>
-            &lt;div class="media">
-                &lt;img src="//akn-aknsite-article-thumbnails.s3.amazonaws.com/e57d85ad-8195-404e-bfe3-ad3a8db47ff7.jpg">
-            &lt;/div>
-            &lt;div class="footer">
-                &lt;p>3ds Max 2015 | Article&lt;/p>
-            &lt;/div>
-        &lt;/div>
-    &lt;/div>
-
-    &lt;div class="cards-footer">
-        &lt;div class="column">
-            &lt;a class="see-all" href="/profile/H0IVG0XZC26PJ/articles">See all my articles&lt;/a>
-        &lt;/div>
-    &lt;/div>
-&lt;/div></pre></code>
-

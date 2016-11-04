@@ -10,7 +10,7 @@ p {
 	font-size: $base-font-size;
 	line-height: $base-line-height;
 	margin: 0;
-	margin-bottom: 18px;
+	margin-bottom: 18px; 
 }
 
 
@@ -23,7 +23,7 @@ a {
 }
 
 img {
-  @include img-responsive();
+  // @include img-responsive();
 }
 
 // Headings
